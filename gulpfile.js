@@ -227,9 +227,9 @@ gulp.task('fonts:dev', function() {
 			'app/fonts/**/*.{svg,ttf,woff}', // eot for ie8
 			'!app/fonts/**/_*/*.*'
 		], {base: 'app'})
-		.pipe(rename(function (path) {
-			path.basename = path.basename.toLowerCase(); // названия файлов в нижнем регистре
-		}))
+		// .pipe(rename(function (path) {
+		// 	path.basename = path.basename.toLowerCase(); // названия файлов в нижнем регистре
+		// }))
 		.pipe(gulp.dest('dist'))
 		.pipe(bs.stream());
 });
@@ -254,6 +254,15 @@ gulp.task('image', function() {
 });
 
 
+// JavaScript
+gulp.task('scripts', function() {
+	return gulp.src('app/js/**/*.js',
+		{base: 'app'})
+		.pipe(gulp.dest('dist'))
+		.pipe(bs.stream());
+});
+
+
 // Server + Watch
 gulp.task('server', ['default'], function() {
 	bs.init({
@@ -263,6 +272,8 @@ gulp.task('server', ['default'], function() {
 	gulp.watch(['app/html/**/*.*', 'app/*.pug'], ['pug']);
 	gulp.watch('app/css/**/*.*', ['sass:dev']);
 	gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
+		.on('change', bs.reload);
+	gulp.watch('app/js/**/*.*', ['scripts'])
 		.on('change', bs.reload);
 	// gulp.watch('app/fonts/**/*.*', ['fonts'])
 	// 	.on('change', bs.reload);
@@ -320,7 +331,7 @@ gulp.task('app:prod', function() {
 
 
 // Build
-gulp.task('default', sequence('clean:dist', ['pug', 'sprite', 'image', 'favicon:generate', 'fonts:dev'], 'favicon:inject'));
+gulp.task('default', sequence('clean:dist', ['pug', 'sprite', 'image', 'favicon:generate', 'fonts:dev', 'scripts'], 'favicon:inject'));
 
 gulp.task('build:prod', sequence('clean:prod', ['htmlmin', 'sass:prod', 'app:prod']));
 

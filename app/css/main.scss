@@ -4,17 +4,17 @@
 @import '../../bower_components/normalize-css/normalize';
 @import 'base/base';
 
-// // LAYOUT
-// @import '../vendor/grid/bootstrap-grid';
-// @import 'layout/layout';
+// LAYOUT
+@import '../vendor/grid/bootstrap-grid';
+@import 'layout/layout';
 
-// // MODULE
-// @import 'module/module';
+// MODULE
+@import 'module/module';
 
 // // STATE
 // @import 'state/state';
 
-// // THEME
-// @import 'theme/theme-default';
+// THEME
+@import 'theme/theme-default';
 
-@import 'svg_test'
+@import 'svg-symbol';
