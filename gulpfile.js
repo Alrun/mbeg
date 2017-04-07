@@ -185,7 +185,7 @@ gulp.task('pug', function() {
 
 // Sass
 gulp.task('sass:dev', function() {
-	return gulp.src('app/css/*.scss')
+	return gulp.src('app/sass/*.scss')
 		.pipe(plumber({
 			errorHandler: notify.onError(function(err) {
 				return {
@@ -194,7 +194,7 @@ gulp.task('sass:dev', function() {
 				};
 			})
 		}))
-		.pipe(newer('app/css/*.scss'))
+		.pipe(newer('app/sass/*.scss'))
 		.pipe(sourcemaps.init())
 		.pipe(sass()) // для SVG спрайтов import: process.cwd() + '/tmp/scss/svg-sprite'
 		.pipe(autoprefixer({
@@ -270,7 +270,7 @@ gulp.task('server', ['default'], function() {
 	});
 
 	gulp.watch(['app/html/**/*.*', 'app/*.pug'], ['pug']);
-	gulp.watch('app/css/**/*.*', ['sass:dev']);
+	gulp.watch('app/sass/**/*.*', ['sass:dev']);
 	gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
 		.on('change', bs.reload);
 	gulp.watch('app/js/**/*.*', ['scripts'])
@@ -299,7 +299,7 @@ gulp.task('htmlmin', function() {
 
 // css
 gulp.task('sass:prod', function() {
-	return gulp.src(['app/css/*.scss', '!app/css/*_.scss'])
+	return gulp.src(['app/sass/*.scss', '!app/sass/*_.scss'])
 		.pipe(plumber({
 			errorHandler: notify.onError(function(err) {
 				return {
@@ -339,10 +339,15 @@ gulp.task('build:prod', sequence('clean:prod', ['htmlmin', 'sass:prod', 'app:pro
 gulp.task('s', function() {
 	bs.init({
 		server: 'dist'
-});
-
+	});
+	gulp.watch(['app/html/**/*.*', 'app/*.pug'], ['pug']);
+	gulp.watch('app/sass/**/*.*', ['sass:dev']);
+	gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
+	.on('change', bs.reload);
+	gulp.watch('app/js/**/*.*', ['scripts'])
+	.on('change', bs.reload);
 	// gulp.watch(['app/html/**/*.*', 'app/*.pug'], ['pug']);
-	// gulp.watch('app/css/**/*.*', ['sass:dev']);
+	// gulp.watch('app/sass/**/*.*', ['sass:dev']);
 	// gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
 	// 	.on('change', bs.reload);
 	// gulp.watch('app/fonts/**/*.*', ['fonts'])
