@@ -1,5 +1,8 @@
-@import 'sprites';
-@import '_header/header__upline';
+@import 'header/_header_upline';
+@import 'header/_header_container';
+@import 'header/_header_navbar';
+@import '_slick';
+@import 'header/_header_slick';
 // @import 'header_logo';
 // @import 'header_follow';
 // @import 'header_navbar';
@@ -7,4 +10,4 @@
 // @import 'section-one';
 // @import 'section-two';
 
-@import '404';
+// @import '404';

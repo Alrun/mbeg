@@ -1,56 +1,47 @@
-header.header.container
-	.upline.row
-		.col-md-8
-			.phone
-				span
-					+svg-icon('social__print', 'green')
-				p +7 (812) 937 59 77
+header.header
+	.upline
+		.container
+			.row
+				.upline__item.col-sm-6.col-md-4.col-lg-3
+					.upline__content
+						+svg-icon('upline__phone')
+						h6.upline__text +7 (812) 937 59 77
+				.upline__item.col-sm-6.col-md-4.col-lg-3
+					.upline__content
+						+svg-icon('upline__e-mail')
+						h6.upline__text info@mbeg.ru
 
-	nav.header__nav
-		.navbar
-			.navbar__wrap
-				input.navbar__input(id='nav-mini' type='checkbox')
-				.navbar__container
-					.navbar__mobile
-						label.navbar__toggler(for='nav-mini')
-							span.navbar__icon
-					.navbar__content
-						ul.nav
-							li.nav__item.nav__item_adaptive
-								a.nav__link.nav__link_active(href='#') Главная
-							li.nav__item.nav__item_adaptive
-								a.nav__link(href='#') О нас
-							li.nav__item.nav__item_adaptive
-								a.nav__link(href='#') Selling
-							li.nav__item.nav__item_adaptive
-								a.nav__link(href='#') Renting
-							li.nav__item.nav__item_adaptive
-								a.nav__link(href='#') Finance
-	.container
-		.header__line.row
-			.logo
-				a.logo__link(href='#')
-					h1.logo__title Real Estate Appraisal
-			.col-md-6.push-md-6
-				.header__line_right.text-xs-center.text-md-right
-					.follow
-						ul.follow__container
-							li.follow__item
-								p.follow__text Follow Us:
-							li.follow__item
-								a.follow__link(href='#')
-									i.follow__icon-tweetter
-							li.follow__item
-								a.follow__link(href='#')
-									i.follow__icon-facebook
-							li.follow__item
-								a.follow__link(href='#')
-									i.follow__icon-add
-		//- .header__slider.row
-		//- 	ul.slider
-		//- 		li.slider__item
-		//- 			img.slider__img(src="img/slider__slide-1.jpg" alt="House")
-		//- 		li.slider__item
-		//- 			img.slider__img(src="img/slider__slide-2.jpg" alt="House")
-		//- 		li.slider__item
-		//- 			img.slider__img(src="img/slider__slide-3.jpg" alt="House")
+				.upline__item.col-sm-12.col-md-4.col-lg-6
+					.social.text-xs-center.text-md-right
+						a(href="#").social__link
+							+svg-icon('social__vk')
+						a(href="#").social__link
+							+svg-icon('social__facebook')
+
+	.header__container
+		.slider-bg
+			.slider-bg__item
+				img.slider-bg__img(src="img/1.jpg" alt="")
+			.slider-bg__item
+				img.slider-bg__img(src="img/2.jpg" alt="")
+			.slider-bg__item
+				img.slider-bg__img(src="img/3.jpg" alt="")
+
+		.header__line.container
+			.row
+				.hidden-sm-down.col-lg-4.col-xl-5
+					.logo
+						+svg-icon('logo')
+				.col-sm-12.col-lg-8.col-xl-7
+					nav.header-nav
+						include ../../blocks/navbar/navbar_2/navbar_2
+
+			.row
+				.slider-main
+					.slider-main__item
+						p.slider-main__text Test 1
+						img.slider-main__img(src="img/1.jpg" alt="")
+					.slider-main__item
+						img.slider-main__img(src="img/2.jpg" alt="")
+					.slider-main__item
+						img.slider-main__img(src="img/3.jpg" alt="")

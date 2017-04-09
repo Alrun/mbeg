@@ -1,6 +1,6 @@
-// .page {
-// 	background: #3b3b3b;
-// }
+.page {
+	background-color: lighten($second-color, 12%);
+}
 // .sticky-footer {
 // 	background: #3b3b3b;
 // 	background: url(../img/fon.png) #272727; // for ie9
@@ -28,12 +28,12 @@
 // 	background: inherit;
 // }
 
-div {
-	outline: 1px solid deeppink;
-}
-nav, section, header, footer {
-	outline: 1px solid lime;
-}
-p, h1, h2, h3, h4, h5, h6, a {
-	outline: 1px solid aqua;
-}
+// div {
+// 	outline: 1px solid deeppink;
+// }
+// nav, section, header, footer {
+// 	outline: 1px solid lime;
+// }
+// p, h1, h2, h3, h4, h5, h6, a {
+// 	outline: 1px solid aqua;
+// }

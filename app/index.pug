@@ -1,5 +1,5 @@
 extends html/layouts/_default
-
+		
 block page-vars
 	-
 		var page = {
@@ -8,10 +8,5 @@ block page-vars
 			description: 'Описание главной страницы'
 		};
 
-block append meta
-	//-bower:css
-	//-endbower
-
-block prepend scripts
-	//-bower:js
-	//-endbower
+block body
+	include html/pages/_home

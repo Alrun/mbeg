@@ -6,113 +6,122 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="description" content="Описание главной страницы">
 		<meta name="keywords" content="Ключевые слова">
+		<link rel="stylesheet" href="css/vendor.css">
 		<link rel="stylesheet" href="css/main.css">
 		<title>МБ Инжиниринг Групп | Главная Страница</title>
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png?v=1.0.1">
-<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png?v=1.0.1" sizes="32x32">
-<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png?v=1.0.1" sizes="16x16">
-<link rel="manifest" href="img/favicon/manifest.json?v=1.0.1">
-<link rel="shortcut icon" href="img/favicon/favicon.ico?v=1.0.1">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png?v=1.0.1">
-<meta name="msapplication-config" content="img/favicon/browserconfig.xml?v=1.0.1">
-<meta name="theme-color" content="#ffffff"></head>
+	</head>
 	<body class="page">
-		<header class="header container">
-			<div class="upline row">
-				<div class="col-md-8">
-					<div class="phone"><span>
-							<svg class="svg-social__print green">
-								<use xlink:href="#social__print"/>
-							</svg></span>
-						<p>+7 (812) 937 59 77</p>
-					</div>
-				</div>
-			</div>
-			<nav class="header__nav">
-				<div class="navbar">
-					<div class="navbar__wrap">
-						<input class="navbar__input" id="nav-mini" type="checkbox">
-						<div class="navbar__container">
-							<div class="navbar__mobile">
-								<label class="navbar__toggler" for="nav-mini"><span class="navbar__icon"></span></label>
+		<header class="header">
+			<div class="upline">
+				<div class="container">
+					<div class="row">
+						<div class="upline__item col-sm-6 col-md-4 col-lg-3">
+							<div class="upline__content">
+								<svg class="svg-upline__phone ">
+									<use xlink:href="#upline__phone"></use>
+								</svg>
+								<h6 class="upline__text">+7 (812) 937 59 77</h6>
 							</div>
-							<div class="navbar__content">
-								<ul class="nav">
-									<li class="nav__item nav__item_adaptive"><a class="nav__link nav__link_active" href="#">Главная</a></li>
-									<li class="nav__item nav__item_adaptive"><a class="nav__link" href="#">О нас</a></li>
-									<li class="nav__item nav__item_adaptive"><a class="nav__link" href="#">Selling</a></li>
-									<li class="nav__item nav__item_adaptive"><a class="nav__link" href="#">Renting</a></li>
-									<li class="nav__item nav__item_adaptive"><a class="nav__link" href="#">Finance</a></li>
-								</ul>
+						</div>
+						<div class="upline__item col-sm-6 col-md-4 col-lg-3">
+							<div class="upline__content">
+								<svg class="svg-upline__e-mail ">
+									<use xlink:href="#upline__e-mail"></use>
+								</svg>
+								<h6 class="upline__text">info@mbeg.ru</h6>
 							</div>
+						</div>
+						<div class="upline__item col-sm-12 col-md-4 col-lg-6">
+							<div class="social text-xs-center text-md-right"><a class="social__link" href="#">
+									<svg class="svg-social__vk ">
+										<use xlink:href="#social__vk"></use>
+									</svg></a><a class="social__link" href="#">
+									<svg class="svg-social__facebook ">
+										<use xlink:href="#social__facebook"></use>
+									</svg></a></div>
 						</div>
 					</div>
 				</div>
-			</nav>
-			<div class="container">
-				<div class="header__line row">
-					<div class="logo"><a class="logo__link" href="#">
-							<h1 class="logo__title">Real Estate Appraisal</h1></a></div>
-					<div class="col-md-6 push-md-6">
-						<div class="header__line_right text-xs-center text-md-right">
-							<div class="follow">
-								<ul class="follow__container">
-									<li class="follow__item">
-										<p class="follow__text">Follow Us:</p>
-									</li>
-									<li class="follow__item"><a class="follow__link" href="#"><i class="follow__icon-tweetter"></i></a></li>
-									<li class="follow__item"><a class="follow__link" href="#"><i class="follow__icon-facebook"></i></a></li>
-									<li class="follow__item"><a class="follow__link" href="#"><i class="follow__icon-add"></i></a></li>
-								</ul>
+			</div>
+			<div class="header__container">
+				<div class="slider-bg">
+					<div class="slider-bg__item"><img class="slider-bg__img" src="img/1.jpg" alt=""></div>
+					<div class="slider-bg__item"><img class="slider-bg__img" src="img/2.jpg" alt=""></div>
+					<div class="slider-bg__item"><img class="slider-bg__img" src="img/3.jpg" alt=""></div>
+				</div>
+				<div class="header__line container">
+					<div class="row">
+						<div class="hidden-sm-down col-lg-4 col-xl-5">
+							<div class="logo">
+								<svg class="svg-logo ">
+									<use xlink:href="#logo"></use>
+								</svg>
 							</div>
+						</div>
+						<div class="col-sm-12 col-lg-8 col-xl-7">
+							<nav class="header-nav">
+								<div class="navbar">
+									<div class="navbar__wrap">
+										<input class="navbar__input" id="nav-mini" type="checkbox">
+										<div class="navbar__container">
+											<div class="navbar__mobile"><span class="navbar__icon"></span>
+												<label class="navbar__toggler" for="nav-mini"></label>
+												<h3 class="page__title">Главная</h3>
+											</div>
+											<ul class="nav-main">
+												<li class="nav-main__item nav-main__item_active"><a class="nav-main__link" href="#Главная">Главная</a></li>
+												<li class="nav-main__item"><a class="nav-main__link icon-dropdown" href="#О нас">О нас</a>
+													<ul class="nav-second nav-second_dropdown">
+														<li class="nav-second__item"><a class="nav-second__link" href="#О компании">О компании</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Реквизиты">Реквизиты</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Партнеры">Партнеры</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Отзывы">Отзывы</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Вакансии">Вакансии</a></li>
+													</ul>
+												</li>
+												<li class="nav-main__item"><a class="nav-main__link icon-dropdown" href="#Портфолио">Портфолио</a>
+													<ul class="nav-second nav-second_dropdown">
+														<li class="nav-second__item"><a class="nav-second__link" href="#Проекты">Проекты</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Монтаж">Монтаж</a></li>
+													</ul>
+												</li>
+												<li class="nav-main__item"><a class="nav-main__link icon-dropdown" href="#Монтаж">Монтаж</a>
+													<ul class="nav-second nav-second_dropdown">
+														<li class="nav-second__item"><a class="nav-second__link" href="#Систем электроснабжения">Систем электроснабжения</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Систем водоснабжения и канализации">Систем водоснабжения и канализации</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Систем отопления и вентиляции">Систем отопления и вентиляции</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Слаботочных систем">Слаботочных систем</a></li>
+													</ul>
+												</li>
+												<li class="nav-main__item"><a class="nav-main__link icon-dropdown" href="#Портфолио">Портфолио</a>
+													<ul class="nav-second nav-second_dropdown">
+														<li class="nav-second__item"><a class="nav-second__link" href="#Общественных зданий">Общественных зданий</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Жилых зданий">Жилых зданий</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Производственных зданий">Производственных зданий</a></li>
+														<li class="nav-second__item"><a class="nav-second__link" href="#Инженерных зданий">Инженерных зданий</a></li>
+													</ul>
+												</li>
+												<li class="nav-main__item"><a class="nav-main__link" href="#Контакты">Контакты</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</div>
+					<div class="row">
+						<div class="slider-main">
+							<div class="slider-main__item">
+								<p class="slider-main__text">Test 1</p><img class="slider-main__img" src="img/1.jpg" alt="">
+							</div>
+							<div class="slider-main__item"><img class="slider-main__img" src="img/2.jpg" alt=""></div>
+							<div class="slider-main__item"><img class="slider-main__img" src="img/3.jpg" alt=""></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-		<p>
-			Далеко-далеко за словесными горами в стране 
-			гласных и согласных живут рыбные тексты.
-		</p>
-		<p>Семь безорфографичный рот продолжил правилами</p>
-		<p>+7 (812) 937 59 77</p>
-		<p>рекламных коварных всеми</p>
-		<h1>Тест заголовка H1</h1>
-		<p>составитель первую рыбного решила</p>
-		<h2>Тест заголовка H2</h2>
-		<p>Оксмокс рыбного букв семь</p>
-		<h3>Тест заголовка H3</h3>
-		<p>Сих текстов, за предупредила.</p>
-		<h4>Тест заголовка H4</h4>
-		<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Вопроса, даже заголовок подзаголовок свой там! Скатился это, дороге заманивший, предупреждал пояс прямо буквоград свое если ему, рыбного жизни речью.</p>
-		<h5>Тест заголовка H5</h5>
-		<h6>Тест заголовка H6</h6>
-		<h3>Опыт</h3>
-		<p>Высокий уровень квалификации и профессионализм сотрудников нашей компании позволяют создавать и реализовывать проекты любой сложности, соответствующие самым строгим требованиям наших заказчиков.</p>
-		<h3>Монтажные работы</h3>
-		<h4>Наши монтажники выполнят для Вас следующие работы:</h4>
-		<p>Монтаж электроснабжения, электрооборудования и электроосвещения</p>
-		<p>Монтаж электроснабжения, электрооборудования и электроосвещения</p>
-		<p>Монтаж электроснабжения, электрооборудования и электроосвещения</p>
-		<p>Монтаж электроснабжения, электрооборудования и электроосвещения</p>
-		<div class="main"></div>
-		<div class="body"></div>
-		<div class="second"></div>
-		<button>кнопка</button>
-		<div class="wrap-svg">
-			<svg class="svg-social__print green">
-				<use xlink:href="#social__print"/>
-			</svg>
-		</div>
-		<footer class="footer row">
-			<div class="container">
-				<div class="footer__content text-xs-center">
-					<p class="footer__text">©2016 Real Estate</p>
-					<p class="footer__text">Website Template by Alrun</p>
-				</div>
-			</div>
-		</footer>
+		<script src="js/vendor.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

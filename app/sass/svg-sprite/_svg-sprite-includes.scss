@@ -1,0 +1,59 @@
+@import 'svg-sprite-mixins';
+
+.svg-checkbox {
+	@include svg-symbol(checkbox);
+}
+.svg-logo {
+	@include svg-symbol(logo);
+}
+.svg-social__add {
+	@include svg-symbol(social__add);
+}
+.svg-social__facebook {
+	@include svg-symbol(social__facebook);
+}
+.svg-social__mail-ru {
+	@include svg-symbol(social__mail-ru);
+}
+.svg-social__ok {
+	@include svg-symbol(social__ok);
+}
+.svg-social__vk {
+	@include svg-symbol(social__vk);
+}
+.svg-social__print {
+	@include svg-symbol(social__print);
+}
+.svg-social__twitter {
+	@include svg-symbol(social__twitter);
+}
+.svg-upline__e-mail {
+	@include svg-symbol(upline__e-mail);
+}
+.svg-upline__phone {
+	@include svg-symbol(upline__phone);
+}
+.svg-uslugi__calculator {
+	@include svg-symbol(uslugi__calculator);
+}
+.svg-uslugi__manager {
+	@include svg-symbol(uslugi__manager);
+}
+.svg-uslugi__montazman {
+	@include svg-symbol(uslugi__montazman);
+}
+.svg-uslugi__projectman {
+	@include svg-symbol(uslugi__projectman);
+}
+.svg-why__experience {
+	@include svg-symbol(why__experience);
+}
+.svg-why__optimization {
+	@include svg-symbol(why__optimization);
+}
+.svg-why__team {
+	@include svg-symbol(why__team);
+}
+.svg-why__technology {
+	@include svg-symbol(why__technology);
+}

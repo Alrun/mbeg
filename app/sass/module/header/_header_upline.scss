@@ -1,0 +1,27 @@
+.upline {
+	background-color: #000;
+}
+.upline__item {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.upline__text {
+	display: inline-block;
+	padding-bottom: 0.25em;
+	margin: 0;
+	vertical-align: bottom;
+	font-style: normal;
+	color: $main-color;
+}
+.upline__text:not(:first-child) {
+	margin-left: 10px;
+}
+.social__link {
+	display: inline-block;
+}
+.social__link:not(:first-child) {
+	margin-left: 15px;
+}
+.upline svg {
+	font-size: 0.9px;
+}

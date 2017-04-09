@@ -1,8 +1,34 @@
+$(document).ready(function(){
+	
+	$('.slider-main').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.slider-bg',
+		dots: true,
+		focusOnSelect: true,
+		autoplay: true,
+		autoplaySpeed: 10000
+	});
+	$('.slider-bg').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-main'
+	});
+	$('.slider-work').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		arrows: true,
+		dots: true
+	});
+
+});
 ;( function( window, document ) {
   'use strict';
 
   var file = 'img/sprite.symbol.svg',
-      revision = 1;
+      revision = 2;
 
   if ( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
     return true;
