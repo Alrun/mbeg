@@ -14,7 +14,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: rgba(0, 0, 0, .9);
+	background-color: rgba(0, 0, 0, .85);
 }
 .slider-bg__img {
 	width: 100%;
@@ -56,5 +56,11 @@
 	}
 	.slider-main .slick-next {
 		right: 1.5rem;
+	}
+}
+@media (max-width: 1440px) {
+	.slider-bg__img {
+		width: 135%;
+		margin-left: -17.5%;
 	}
 }

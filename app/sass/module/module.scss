@@ -1,8 +1,10 @@
-@import 'header/_header_upline';
-@import 'header/_header_container';
-@import 'header/_header_navbar';
-@import '_slick';
-@import 'header/_header_slick';
+@import 'header/header_upline';
+@import 'header/header_container';
+@import 'header/header_logo';
+@import 'header/header_navbar_2';
+@import 'slick';
+@import 'header/header_slick';
+@import 'header/header';
 // @import 'header_logo';
 // @import 'header_follow';
 // @import 'header_navbar';

@@ -19,7 +19,7 @@ header.header
 							+svg-icon('social__facebook')
 
 	.header__container
-		.slider-bg
+		.slider-bg.hidden-sm-down
 			.slider-bg__item
 				img.slider-bg__img(src="img/1.jpg" alt="")
 			.slider-bg__item
@@ -28,13 +28,15 @@ header.header
 				img.slider-bg__img(src="img/3.jpg" alt="")
 
 		.header__line.container
-			.row
-				.hidden-sm-down.col-lg-4.col-xl-5
-					.logo
-						+svg-icon('logo')
-				.col-sm-12.col-lg-8.col-xl-7
-					nav.header-nav
-						include ../../blocks/navbar/navbar_2/navbar_2
+			.nav-wrap.row
+				.header-logo.hidden-sm-down.col-lg-4.col-xl-5
+					+svg-icon('logo')
+					.logo-desc
+							h6.logo-desc__text Создание проектной документации
+							h6.logo-desc__text Строительно-монтажные работы
+							h6.logo-desc__text Продажа светодиодного и климатического оборудования
+				nav.header-nav.col-sm-12.col-lg-8.col-xl-7
+					include ../../blocks/navbar/navbar_2/navbar_2
 
 			.row
 				.slider-main

@@ -18,14 +18,14 @@
 .svg-social__ok {
 	@include svg-symbol(social__ok);
 }
-.svg-social__vk {
-	@include svg-symbol(social__vk);
-}
 .svg-social__print {
 	@include svg-symbol(social__print);
 }
 .svg-social__twitter {
 	@include svg-symbol(social__twitter);
+}
+.svg-social__vk {
+	@include svg-symbol(social__vk);
 }
 .svg-upline__e-mail {
 	@include svg-symbol(upline__e-mail);

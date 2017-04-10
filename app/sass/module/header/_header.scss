@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+	.upline {
+		margin-top: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	.nav-wrap {
+		position: relative;
+	}
+	.header-nav {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -0.625rem;
+	}
+}

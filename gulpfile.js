@@ -123,7 +123,7 @@ gulp.task('svgSprite', function () {
 					maxHeight: 2300
 				},
 				spacing: {
-					padding: 5
+					padding: 0
 				}
 			},
 			mode: {
