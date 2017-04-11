@@ -4,27 +4,86 @@
 .navbar__container {
 	position: relative;
 	margin: 0;
+	text-align: right;
 }
 .nav-main__item {
-	color: #ccc;
+	position: relative;
+	display: inline-block;
+	color: darken($text-color, 15%);
+	
 	&:hover {
-		color: #fff;
+		color: $title-color;
+	}
+	&:not(:first-child) {
+		margin-left: 1.15rem;
 	}
 }
+
 .nav-main__item_active {
-	color: #47b900;
+	color: $main-color;
+	
 	&:hover {
-		color: #47b900;
+		color: $main-color;
 	}
+}
+.nav-main__item:hover > .nav-second_dropdown {
+	top: 1rem;
+	opacity: 1;
+	transition: opacity .3s;
 }
 .nav-main__link {
 	white-space: nowrap;
 	text-decoration: none;
-	color: inherit;
-	text-align: left;
-	font-size: .9rem;
+	font-size: 0.9375rem;
 	text-transform: uppercase;
-	transition: color .2s;
+	text-align: left;
+	color: inherit;
+	transition: color 0.2s;
+}
+.nav-second__item {
+	color: darken($title-color, 15%);
+	
+	&:hover {
+		color: $title-color;
+	}
+}
+.nav-second__item {
+	position: relative;
+}
+.nav-second__item:first-child {
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -1.3rem;
+		left: 0.9rem;
+		border-width: 0.25rem .65rem 1rem;
+		border-color: transparent transparent black;
+		border-style: solid;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: -5px;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background-color: black;
+	}
+}
+
+.nav-second__item:hover > .nav-third_dropdown {
+	opacity: 1;
+	transition: .25s;
+}
+.nav-second__link {
+	display: block;
+	border-bottom: 2px solid lighten($second-color, 10%);
+	font-size: 1rem;
+	transition: .25s;
+	&:hover {
+		background: $main-color;
+	}
 }
 .nav-second__link {
 	white-space: nowrap;
@@ -32,100 +91,48 @@
 	color: inherit;
 	text-align: left;
 	display: block;
-	border-bottom: 2px solid #222;
+	border-bottom: 2px solid lighten($second-color, 10%);
 	font-size: 1rem;
-	transition: .25s;
+	transition: 0.25s;
+
 	&:hover {
-		background: #47b900;
+		background: $main-color;
 	}
 }
-.nav-second__item {
-	color: #bbb;
-	&:hover {
-		color: #fff;
-		>.nav-third_dropdown {
-			opacity: 1;
-			transition: .25s;
-		}
+.nav-second__link {
+	padding: .65rem 1.4rem;
+	background-color: #000;
+}
+
+.nav-second_dropdown {
+	position: absolute;
+	top: -9999px;
+	padding-top: 1.2rem;
+	opacity: 0;
+	overflow: hidden;
+	z-index: 1998;
+}
+.icon-dropdown {
+	padding-right: 1rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		border-style: solid;
+		border-color: #888 transparent transparent;
+		border-width: .35rem .35rem 0;
+		right: 0;
+		top: 50%;
+		margin-top: -.2rem;
 	}
 }
 
-@media (min-width: 768px) {
-	.navbar__input {
-		display: none;
-	}
-	.navbar__container {
-		text-align: right;
-	}
-	.nav-main__item {
-		&:not(:first-child) {
-			margin-left: 1.15rem;
-		}
-		position: relative;
-		display: inline-block;
-		&:hover {
-			>.nav-second_dropdown {
-				top: 1rem;
-				opacity: 1;
-				transition: opacity .3s;
-			}
-		}
-	}
-	.nav-main {
-		display: inline-block;
-	}
-	.nav-second__item {
-		position: relative;
-		&:first-child {
-			&::before {
-				content: '';
-				position: absolute;
-				top: -1.3rem;
-				left: 0.9rem;
-				border-width: 0.25rem .65rem 1rem;
-				border-color: transparent transparent black;
-				border-style: solid;
-			}
-			&::after {
-				content: '';
-				position: absolute;
-				top: -5px;
-				left: 0;
-				width: 100%;
-				height: 5px;
-				background-color: black;
-			}
-		}
-	}
-	.nav-second__link {
-		padding: .65rem 1.4rem;
-		background-color: #000;
-	}
-	.nav-second_dropdown {
-		position: absolute;
-		top: -9999px;
-		padding-top: 1.2rem;
-		opacity: 0;
-		overflow: hidden;
-		z-index: 1998;
-	}
-	.icon-dropdown {
-		padding-right: 1rem;
-		&::before {
-			content: '';
-			position: absolute;
-			border-style: solid;
-			border-color: #888 transparent transparent;
-			border-width: .35rem .35rem 0;
-			right: 0;
-			top: 50%;
-			margin-top: -.2rem;
-		}
-	}
-	.page__title {
-		display: none;
-	}
+
+.page__title {
+	display: none;
 }
+
+
 @media (max-width: 767px) {
 	.navbar__mobile {
 		position: fixed;
@@ -172,7 +179,7 @@
 		height: 2px;
 		background-color: #fff;
 		position: relative;
-		top: 23px;
+		top: 22px;
 		left: 15px;
 		&::before,
 		&::after {

@@ -1,6 +1,14 @@
 header.header
 	.upline
 		.container
+			.upline-logo.row.hidden-md-up
+				.logo.col-sm-12
+					.logo__img
+						+svg-icon('logo')
+					.logo-desc
+						h6.logo-desc__text Создание проектной документации
+						h6.logo-desc__text Строительно-монтажные работы
+						h6.logo-desc__text Продажа светодиодного и климатического оборудования
 			.row
 				.upline__item.col-sm-6.col-md-4.col-lg-3
 					.upline__content
@@ -30,8 +38,10 @@ header.header
 		.header__line.container
 			.nav-wrap.row
 				.header-logo.hidden-sm-down.col-lg-4.col-xl-5
-					+svg-icon('logo')
-					.logo-desc
+					.logo
+						.logo__img
+							+svg-icon('logo')
+						.logo-desc.hidden-lg-down
 							h6.logo-desc__text Создание проектной документации
 							h6.logo-desc__text Строительно-монтажные работы
 							h6.logo-desc__text Продажа светодиодного и климатического оборудования
