@@ -25,3 +25,9 @@
 .upline-logo {
 	padding: 10px 0;
 }
+
+@media (max-width: 767px) {
+	.upline {
+		background-color: transparent !important;
+	}
+}

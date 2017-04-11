@@ -10,21 +10,22 @@ header.header
 						h6.logo-desc__text Строительно-монтажные работы
 						h6.logo-desc__text Продажа светодиодного и климатического оборудования
 			.row
-				.upline__item.col-sm-6.col-md-4.col-lg-3
+				.upline__item.col-xs-8.col-sm-6.col-md-4.col-lg-3
 					.upline__content
 						+svg-icon('upline__phone')
 						h6.upline__text +7 (812) 937 59 77
-				.upline__item.col-sm-6.col-md-4.col-lg-3
-					.upline__content
-						+svg-icon('upline__e-mail')
-						h6.upline__text info@mbeg.ru
 
-				.upline__item.col-sm-12.col-md-4.col-lg-6
-					.social.text-xs-center.text-md-right
+				.upline__item.col-xs-4.col-sm-6.col-md-4.push-md-4.push-lg-5
+					.social.text-xs-right
 						a(href="#").social__link
 							+svg-icon('social__vk')
 						a(href="#").social__link
 							+svg-icon('social__facebook')
+
+				.upline__item.col-md-4.pull-md-4.pull-md-4
+					.upline__content
+						+svg-icon('upline__e-mail')
+						h6.upline__text info@mbeg.ru
 
 	.header__container
 		.slider-bg.hidden-sm-down

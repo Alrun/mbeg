@@ -50,6 +50,27 @@
 	padding-left: 2%;
 	text-align: left;
 }
+
+@media (max-width: 543px) {
+	.slick-prev,
+	.slick-next {
+		width: 20px;
+		height: 20px;
+	}
+	.slick-prev::before,
+	.slick-next::before {
+		width: 20px;
+	}
+	.slick-prev::after,
+	.slick-next::after {
+		height: 20px;
+	}
+	.slider-main .slick-dots li button {
+		width: 20px;
+		height: 6px;
+	}
+}
+
 @media (max-width: 1260px) {
 	.slider-main .slick-prev {
 		left: 1.5rem;
