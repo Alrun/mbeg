@@ -6,7 +6,12 @@
 @import 'header/header_slick';
 @import 'header/header';
 
-@import 'section-one';
+.slider-work__img {
+    width: 100%;
+    padding: 15px;
+}
+
+// @import 'section-one';
 // @import 'header_logo';
 // @import 'header_follow';
 // @import 'header_navbar';

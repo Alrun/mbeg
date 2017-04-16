@@ -1,5 +1,15 @@
+.home__projects {
+	background-color: #111111;
+}
+
 @media (min-width: 768px) {
 	.block {
+		margin-top: 1rem;
+		background: rgb(17, 17, 17);
+		border-bottom: 1px solid rgb(71, 185, 0);
+		padding: 0px 20px 50px;
+	}
+	.block-t {
 		display: table;
 		border-collapse: separate;
 		border-spacing: 30px 0;
@@ -7,12 +17,12 @@
 		margin-top: 30px;
 		position: relative;
 		margin-left: -15px;
-    margin-right: -15px;
+		margin-right: -15px;
 	}
-	.block__wrap {
+	.block-t__wrap {
 		display: table-row;
 	}
-	.block__content {
+	.block-t__content {
 		display: table-cell;
 		background: #111111;
 		padding: 30px 20px 50px;
@@ -21,7 +31,11 @@
 }
 
 @media (max-width: 767px) {
-	.block__content {
+	.block {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.block-t__content {
 		background: #111111;
 		margin-bottom: 30px;
 		padding: 15px;
