@@ -1,15 +1,25 @@
+<<<<<<< HEAD
 .home__projects {
 	background-color: #111111;
 }
 
-.block {
+@media (min-width: 768px) {
+	.block {
 		margin-top: 1rem;
 		background: rgb(17, 17, 17);
 		border-bottom: 1px solid rgb(71, 185, 0);
 		padding: 0px 20px 50px;
 	}
-	.block-t {
+=======
+.block {
+	background: #111111;
+	border-bottom: 1px solid #47b900;
+	margin-top: 1rem;
+	padding: 30px 20px 50px;
+}
+
 @media (min-width: 768px) {
+>>>>>>> db639aae8ee76f836b5e8e5870548593c06301a6
 	.block-t {
 		display: table;
 		border-collapse: separate;
@@ -39,7 +49,10 @@
 		margin-left: -15px;
 		margin-right: -15px;
 	}
-	.block-t__content {
+<<<<<<< HEAD
+=======
+
+>>>>>>> db639aae8ee76f836b5e8e5870548593c06301a6
 	.block-t__content {
 		background: #111111;
 		margin-bottom: 30px;
