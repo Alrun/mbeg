@@ -285,7 +285,7 @@ gulp.task('server', ['develop'], function() {
 	// gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
 		// .on('change', bs.reload);
 	// gulp.watch('app/js/**/*.*', ['scripts'])
-		// .on('change', bs.reload);
+	// 	.on('change', bs.reload);
 	// gulp.watch('app/fonts/**/*.*', ['fonts'])
 	// 	.on('change', bs.reload);
 });

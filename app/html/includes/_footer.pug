@@ -1,6 +1,66 @@
-//- footer.footer.row
-//- 	.container
-//- 		.footer__content.text-xs-center
-//- 			p.footer__text ©2016 Real Estate
-//- 			p.footer__text
-//- 				|Website Template by Alrun
+footer.footer
+	.footer__container.container
+		.footer__row.row
+			.footer__item.col-md-6.col-lg-3.col-xl-4
+				.logo
+					.logo__img
+						+svg-icon('logo')
+					p.logo__text Общество с ограниченной ответственностью «МБ Инжиниринг Групп» (ООО «МБИ») – это профессиональная команда инженеров-проектировщиков и монтажников, которая предлагает Вам свои услуги в области проетирования и строительства различных объектов недвижимости и инженерных систем.
+			
+			.footer__item.col-md-6.col-lg-3.col-xl-3.text-sm-right.text-lg-left
+				h3.footer__title Карта сайта
+				.footer-nav
+					ul.footer-nav__list
+						li.footer-nav__item
+							a(href="#").footer-nav__link Главная
+						li.footer-nav__item
+							a(href="#").footer-nav__link О компании
+						li.footer-nav__item
+							a(href="#").footer-nav__link Проектирование
+						li.footer-nav__item
+							a(href="#").footer-nav__link Монтаж
+						li.footer-nav__item
+							a(href="#").footer-nav__link Портфолио
+						li.footer-nav__item
+							a(href="#").footer-nav__link Контакты
+
+			.footer__item.col-md-6.col-lg-3.col-xl-3
+				h3.footer__title Адрес
+				address.address
+					p.address__text г.Санкт-Петербург, ул.Якорная, д.13, литер А, офис 311. 
+						a(href="#").address__link Карта
+					.address__text Тел: 
+						span.address__text_green +7 (812) 937 59 77
+					.address__text E-mail: info@mbeg.ru
+
+			.footer__item.col-md-6.col-lg-3.col-xl-2.text-sm-right.text-lg-left
+				h3.footer__title Поделиться
+				.share
+					a(href="").share__link
+						+svg-icon('upline__phone')
+					a(href="").share__link
+						+svg-icon('upline__phone')
+					a(href="").share__link
+						+svg-icon('upline__phone')
+			
+		.footer__row.row
+			.col-xs-10.offset-xs-1
+				h2 Наши партнеры
+				.row
+					.slider-partner
+						.slider-partner__item
+							a(href="")
+								+svg-icon('upline__phone')
+						.slider-partner__item
+							a(href="")
+								+svg-icon('upline__phone')
+						.slider-partner__item
+							a(href="")
+								+svg-icon('upline__phone')
+						.slider-partner__item
+							a(href="")
+								+svg-icon('upline__phone')
+
+	.footer__downline
+		.container
+			h6.downline__text.text-xs-center ©2017 МБ Инжиниринг Групп

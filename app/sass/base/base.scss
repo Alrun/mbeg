@@ -2,7 +2,7 @@
 // Background
 $main-color: #74b900; 
 $second-color: #000000;
-$block-content: lighten($second-color, 5%);
+$main-bg: lighten($second-color, 5%);
 
 // Font
 $sans-serif: Tahoma, Verdana, Arial, sans-serif;
@@ -39,9 +39,9 @@ body {
   background-color: lighten($second-color, 12%);
 }
 
-section {
-  margin-top: 2rem;
-}
+// section {
+//   margin-top: 2rem;
+// }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -71,6 +71,13 @@ h1, h2,
 .h1, .h2 {
 	text-transform: uppercase;
 	font-weight: 400;
+}
+
+h2,
+.h2 {
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  color: darken($title-color, 15%);
 }
 
 h3, h4, h5, h6,

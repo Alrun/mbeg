@@ -1,0 +1,37 @@
+.footer-nav__item + .footer-nav__item {
+	margin-top: 0.1875rem;
+}
+.footer-nav__link {
+	color: $title-color;
+	transition: all 0.2s;
+	
+	&:hover {
+		color: $main-color;
+	}
+}
+
+.address__link {
+	border-bottom: 1px dashed;
+	border-color: $text-color;
+	text-transform: none;
+	font-style: italic;
+	color: $text-color;
+	transition: all 0.2s;
+}
+.address__link:hover {
+	color: darken($text-color, 15%);
+	border-color: darken($text-color, 15%);
+}
+.address__text {
+	color: $title-color;
+}
+.address__text_green {
+	color: $main-color;
+}
+
+.share__link {
+	display: inline-block;
+}
+.share__link + .share__link {
+	margin-left: 10px;
+}
