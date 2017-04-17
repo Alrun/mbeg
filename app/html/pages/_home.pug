@@ -19,79 +19,96 @@ main.home
 	section.home__uslugi.container
 		.block.row
 			h2 К вашим услугам
-			.row
-				.col-md-6.col-lg-3.text-xs-center
-					+svg-icon('upline__phone')
-					h4 Проектировщики
-					a(href="#") Подробнее
-				.col-md-6.col-lg-3.text-xs-center
-					+svg-icon('upline__phone')
-					h4 Проектировщики
-					a(href="#") Подробнее
-				.col-md-6.col-lg-3.text-xs-center
-					+svg-icon('upline__phone')
-					h4 Проектировщики
-					a(href="#") Подробнее
-				.col-md-6.col-lg-3.text-xs-center
-					+svg-icon('upline__phone')
-					h4 Проектировщики
-					a(href="#") Подробнее
+			.uslugi.row
+				.uslugi__item.col-md-6.col-lg-3.text-xs-center
+					.uslugi__icon
+						+svg-icon('upline__phone')
+					h4.uslugi__title Проектировщики
+					a(href="#").uslugi__link.btn Подробнее
+				.uslugi__item.col-md-6.col-lg-3.text-xs-center
+					.uslugi__icon
+						+svg-icon('upline__phone')
+					h4.uslugi__title Монтажники
+					a(href="#").uslugi__link.btn Подробнее
+				.uslugi__item.col-md-6.col-lg-3.text-xs-center
+					.uslugi__icon
+						+svg-icon('upline__phone')
+					h4.uslugi__title Менеджеры
+					a(href="#").uslugi__link.btn Подробнее
+				.uslugi__item.col-md-6.col-lg-3.text-xs-center
+					.uslugi__icon
+						+svg-icon('upline__phone')
+					h4.uslugi__title Калькулятор
+					a(href="#").uslugi__link.btn Рассчитать
 
 	section.home__projects
 		.container
 			.row
 				h2 Основные проекты
-
 			.row
 				.offset-xs-1.col-xs-10
 					.row
 						.slider-work
 							.slider-work__item
-								img(src="img/1.jpg" alt="").slider-work__img
+								img(src="img/work-1.jpg" alt="").slider-work__img
 								.slider-desc
 									h6.slider-desc__title Test 1
 							.slider-work__item
-								img(src="img/2.jpg" alt="").slider-work__img
+								img(src="img/work-2.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 1
+									h6.slider-desc__title Test 2
 							.slider-work__item
-								img(src="img/3.jpg" alt="").slider-work__img
+								img(src="img/work-3.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 1
+									h6.slider-desc__title Test 3
 							.slider-work__item
-								img(src="img/3.jpg" alt="").slider-work__img
+								img(src="img/work-4.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 1
+									h6.slider-desc__title Test 4
 							.slider-work__item
-								img(src="img/2.jpg" alt="").slider-work__img
+								img(src="img/work-5.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 1
+									h6.slider-desc__title Test 5
 							.slider-work__item
-								img(src="img/1.jpg" alt="").slider-work__img
+								img(src="img/work-6.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 1
-
-						a(href="#") Показать все
-
-	section.home__why
-		.container
+									h6.slider-desc__title Test 6
+							.slider-work__item
+								img(src="img/work-7.jpg" alt="").slider-work__img
+								.slider-desc
+									h6.slider-desc__title Test 7
+							.slider-work__item
+								img(src="img/work-7.jpg" alt="").slider-work__img
+								.slider-desc
+									h6.slider-desc__title Test 8
+							.slider-work__item
+								img(src="img/work-7.jpg" alt="").slider-work__img
+								.slider-desc
+									h6.slider-desc__title Test 9
 			.row
-				.col-md-12
-					.row
-						h2 Почему мы?
-						.col-md-6.col-lg-3.text-xs-center
-							+svg-icon('upline__phone')
-							h4 Проектировщики
-							p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего предложения рыбными бросил большого, коварный свой даже там первую, ты собрал города, это несколько маленький деревни точках текст даль!
-						.col-md-6.col-lg-3.text-xs-center
-							+svg-icon('upline__phone')
-							h4 Проектировщики
-							p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего предложения рыбными бросил большого, коварный свой даже там первую, ты собрал города, это несколько маленький деревни точках текст даль!
-						.col-md-6.col-lg-3.text-xs-center
-							+svg-icon('upline__phone')
-							h4 Проектировщики
-							p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего предложения рыбными бросил большого, коварный свой даже там первую, ты собрал города, это несколько маленький деревни точках текст даль!
-						.col-md-6.col-lg-3.text-xs-center
-							+svg-icon('upline__phone')
-							h4 Проектировщики
-							p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своего предложения рыбными бросил большого, коварный свой даже там первую, ты собрал города, это несколько маленький деревни точках текст даль!
+				.slider-work__btn-wrap.col-xs-12.text-xs-center
+					a(href="#").slider-work__btn.btn Показать все
+
+	section.home__why.container
+		h2 Почему мы?
+		.why.row
+			.why__item.col-md-6.col-lg-3.push-lg-3.text-xs-center
+				.why__icon
+					+svg-icon('upline__phone')
+				h4.why__title Команда
+				p.why__text Архитекторы. Строители. Менеджеры проекта. Каждый успешный проект начинается с успешной команды.
+			.why__item.col-md-6.col-lg-3.pull-lg-3.text-xs-center
+				.why__icon
+					+svg-icon('upline__phone')
+				h4.why__title Опыт
+				p.why__text Высокий уровень квалификации и профессионализм сотрудников нашей компании позволяют создавать и реализовывать проекты любой сложности, соответствующие самым строгим требованиям наших заказчиков.
+			.why__item.col-md-6.col-lg-3.text-xs-center
+				.why__icon
+					+svg-icon('upline__phone')
+				h4.why__title Оптимизация
+				p.why__text Мы работаем в рамках вашего графика и бюджета. Умело применяем здравый смысл и инновационный подход для экономии ваших времени и денег от начала строительства до его завершения.
+			.why__item.col-md-6.col-lg-3.text-xs-center
+				.why__icon
+					+svg-icon('upline__phone')
+				h4.why__title Технологии
+				p.why__text Все работы выполняются в соответствии с требованиями нормативной документации, с применением современных материалов и оборудования.

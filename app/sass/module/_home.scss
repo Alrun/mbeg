@@ -1,0 +1,21 @@
+.slider-work {
+	margin-bottom: 4rem;
+}
+.slider-work__img {
+	width: 100%;
+	padding: 15px;
+}
+.slider-desc {
+	background: lighten($main-bg, 10%);
+	padding: 10px 5px;
+	border-bottom: 1px solid $main-color;
+	margin: -15px 15px 0;
+
+}
+
+.slider-work .slick-dots {
+	text-align: center;	
+}
+.slider-work .slick-dots li {
+	padding: 2px;
+}

@@ -1,3 +1,17 @@
+.btn {
+	display: inline-block;
+	padding: 8px 40px 10px;
+	border: 2px solid $main-color;
+	text-transform: uppercase;
+	color: $title-color;
+	text-shadow: 1px 0 0 #000;
+	transition: all 0.2s;
+	font-size: 0.8125rem;
+}
+.btn:hover {
+	background-color: $main-color;
+}
+
 @import 'l-header';
 @import 'l-body';
 @import 'l-footer';

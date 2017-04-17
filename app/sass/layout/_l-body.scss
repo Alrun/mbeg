@@ -1,19 +1,34 @@
 section h2 {
 	text-align: center;
 }
-
-.home__projects {
-	background-color: $main-bg;
+section h4 {
+	margin-top: 1rem;
 }
 
 .block {
-	padding: 0 20px 50px;
+	padding: 0 20px 30px;
 	border-bottom: 1px solid $main-color;
 	margin-bottom: 30px;
 	background: $main-bg;
 }
 .block-t {
 	margin-top: 30px;
+}
+
+.uslugi__item {
+	margin-bottom: 2rem;
+}
+
+.home__projects {
+	padding-bottom: 4rem;
+	background-color: $main-bg;
+}
+
+.why__item {
+	margin-bottom: 2rem;
+}
+.why__text {
+	font-size: 0.9375rem;
 }
 
 @media (min-width: 768px) {
