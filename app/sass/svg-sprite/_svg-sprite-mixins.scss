@@ -68,8 +68,8 @@ $padding: map-get($sprite, padding);
 /// Вставка иконки Bacground-image
 @mixin svg-bg($iconName) {
 	@extend %sprite;
-	@extend %svg-sprite;
-	@extend %png-sprite; // png fallback
+	@extend %svg-background;
+	@extend %png-background; // png fallback
 	
 	$iconProp: iconAttr($iconName);
 

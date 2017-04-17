@@ -1,11 +1,10 @@
 @import '../../../blocks/navbar/navbar_2/navbar_2';
 
-// .nav-main__link {
-// 	font-size: 0.935rem;
-// }
-// .nav-second__link {
-// 	font-size: 0.875rem;
-// }
+.nav-main__link,
+.nav-second__link {
+	font-size: 0.9125rem;
+	font-weight: 400;
+}
 
 // @media (max-width: 767px) {
 // 	.page__title {

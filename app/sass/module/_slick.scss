@@ -90,3 +90,12 @@
 .slick-dots .slick-active:hover {
 	background-color: #47b900;
 }
+
+@media (max-width: 543px) {
+	.slick-prev {
+		left: -20px;
+	}
+	.slick-next {
+		right: -20px;
+	}
+}

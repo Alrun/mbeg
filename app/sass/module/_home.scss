@@ -1,21 +1,67 @@
+.home__title {
+	padding: 0;
+	font-style: italic;
+	line-height: 0.8;
+}
+.welcome,
+.shop {
+	font-size: 1.5rem;
+	font-style: italic;
+	text-transform: uppercase;
+	color: $title-color;
+}
+
+
 .slider-work {
 	margin-bottom: 4rem;
 }
+
 .slider-work__img {
 	width: 100%;
 	padding: 15px;
 }
 .slider-desc {
 	background: lighten($main-bg, 10%);
-	padding: 10px 5px;
+	padding: 10px;
 	border-bottom: 1px solid $main-color;
 	margin: -15px 15px 0;
-
 }
+.slider-desc__title {
+	margin: 0;
+	font-size: 0.9375rem;
+	font-style: normal;
+	font-weight: 300;
+	color: $title-color;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 35%;
+		border-bottom: 1px solid $title-color;
+		margin: 5px 0;
+	}
+}
+.slider-desc__text {
+	font-style: italic;
+	font-size: 0.875rem;
+	font-weight: 200;
+}
+
 
 .slider-work .slick-dots {
 	text-align: center;	
 }
 .slider-work .slick-dots li {
 	padding: 2px;
+}
+
+
+.why__item {
+	margin-bottom: 2rem;
+}
+.why__text {
+	font-size: 0.9375rem;
+}
+.why__icon svg {
+	font-size: 50px;
 }

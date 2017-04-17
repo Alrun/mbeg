@@ -4,17 +4,36 @@ main.home
 			.block-t
 				.block-t__wrap
 					.block-t__content.block-t_w50
-						h1.home__title
-							|Добро пожаловать в 
-							span mbe
+						.welcome.text-xs-center Добро пожаловать в 
+						h1.home__title.text-xs-center
+							span.text_main-color mbe
 							|ngineering group
 						p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика, заманивший на берегу назад языкового маленькая ему вопроса силуэт подпоясал семь это встретил до возвращайся безорфографичный образ, своего предупреждал знаках.
 						p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семантика, заманивший на берегу назад языкового маленькая ему вопроса силуэт подпоясал семь это встретил до возвращайся безорфографичный образ, своего предупреждал знаках.
 					.block-t__content.block-t_w50
-						h2.home__title
-							|Наш интернет-магазин 
-							span техносбыт 24
-						p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Единственное взгляд прямо меня над залетают сих, не коварных инициал маленький по всей, вопроса, имеет бросил одна знаках правилами. Большого, эта.
+						.shop.text-xs-center Наш интернет-магазин 
+						h2.h1.home__title.text-xs-center
+							span.text_main-color техносбыт 24
+						p Наш интернет-магазин занимается продажей светодиодного оборудования для физических и юридических лиц.
+						p В нашем интернет-магазине Вы найдете:
+						ul.list
+							li.list__item
+								span.list__icon
+									+svg-icon('upline__e-mail')
+								p.list__title
+									|Энергосберегающие светодиодные лампы высокой яркости
+							li.list__item
+								span.list__icon
+									+svg-icon('upline__e-mail')
+								p.list__title
+									|Светодиодные ленты различной расцветки
+							li.list__item
+								span.list__icon
+									+svg-icon('upline__e-mail')
+								p.list__title
+									|Трансформаторы и стабилизаторы напряжения
+
+						a(href="#").btn.btn-invert.text-xs-center Перейти
 
 	section.home__uslugi.container
 		.block.row
@@ -22,22 +41,22 @@ main.home
 			.uslugi.row
 				.uslugi__item.col-md-6.col-lg-3.text-xs-center
 					.uslugi__icon
-						+svg-icon('upline__phone')
+						+svg-icon('logo')
 					h4.uslugi__title Проектировщики
 					a(href="#").uslugi__link.btn Подробнее
 				.uslugi__item.col-md-6.col-lg-3.text-xs-center
 					.uslugi__icon
-						+svg-icon('upline__phone')
+						+svg-icon('logo')
 					h4.uslugi__title Монтажники
 					a(href="#").uslugi__link.btn Подробнее
 				.uslugi__item.col-md-6.col-lg-3.text-xs-center
 					.uslugi__icon
-						+svg-icon('upline__phone')
+						+svg-icon('logo')
 					h4.uslugi__title Менеджеры
 					a(href="#").uslugi__link.btn Подробнее
 				.uslugi__item.col-md-6.col-lg-3.text-xs-center
 					.uslugi__icon
-						+svg-icon('upline__phone')
+						+svg-icon('logo')
 					h4.uslugi__title Калькулятор
 					a(href="#").uslugi__link.btn Рассчитать
 
@@ -52,39 +71,48 @@ main.home
 							.slider-work__item
 								img(src="img/work-1.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 1
+									h6.slider-desc__title Административное здание г.Санкт-Петербург
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-2.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 2
+									h6.slider-desc__title Коттеджный поселок «Суходольское» п.Громово
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-3.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 3
+									h6.slider-desc__title 12-ти секционный жилой дом г.Домодедово
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-4.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 4
+									h6.slider-desc__title Здание общеобразовательной школы г.Санкт-Петербург, ул.Садовая
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-5.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 5
+									h6.slider-desc__title ТК с административно-складскими зданиями г.Дзержинск
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-6.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 6
+									h6.slider-desc__title Здания автотранспортного предприятия п.Федоровское
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-7.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 7
+									h6.slider-desc__title ТК с административно-складскими зданиями г.Дзержинск
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-7.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 8
+									h6.slider-desc__title ТК с административно-складскими зданиями г.Дзержинск
+									.slider-desc__text Проектирование и дизайн
 							.slider-work__item
 								img(src="img/work-7.jpg" alt="").slider-work__img
 								.slider-desc
-									h6.slider-desc__title Test 9
+									h6.slider-desc__title ТК с административно-складскими зданиями г.Дзержинск
+									.slider-desc__text Проектирование и дизайн
 			.row
 				.slider-work__btn-wrap.col-xs-12.text-xs-center
 					a(href="#").slider-work__btn.btn Показать все
@@ -94,21 +122,21 @@ main.home
 		.why.row
 			.why__item.col-md-6.col-lg-3.push-lg-3.text-xs-center
 				.why__icon
-					+svg-icon('upline__phone')
+					+svg-icon('logo')
 				h4.why__title Команда
 				p.why__text Архитекторы. Строители. Менеджеры проекта. Каждый успешный проект начинается с успешной команды.
 			.why__item.col-md-6.col-lg-3.pull-lg-3.text-xs-center
 				.why__icon
-					+svg-icon('upline__phone')
+					+svg-icon('logo')
 				h4.why__title Опыт
 				p.why__text Высокий уровень квалификации и профессионализм сотрудников нашей компании позволяют создавать и реализовывать проекты любой сложности, соответствующие самым строгим требованиям наших заказчиков.
 			.why__item.col-md-6.col-lg-3.text-xs-center
 				.why__icon
-					+svg-icon('upline__phone')
+					+svg-icon('logo')
 				h4.why__title Оптимизация
 				p.why__text Мы работаем в рамках вашего графика и бюджета. Умело применяем здравый смысл и инновационный подход для экономии ваших времени и денег от начала строительства до его завершения.
 			.why__item.col-md-6.col-lg-3.text-xs-center
 				.why__icon
-					+svg-icon('upline__phone')
+					+svg-icon('logo')
 				h4.why__title Технологии
 				p.why__text Все работы выполняются в соответствии с требованиями нормативной документации, с применением современных материалов и оборудования.

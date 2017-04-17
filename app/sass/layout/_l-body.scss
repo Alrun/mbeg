@@ -24,12 +24,24 @@ section h4 {
 	background-color: $main-bg;
 }
 
-.why__item {
-	margin-bottom: 2rem;
+
+.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 2rem 0; 
 }
-.why__text {
+.list__item {
+	margin-bottom: 0.9375rem;
+}
+.list__title {
+	display: inline;
+	margin-left: 15px;
 	font-size: 0.9375rem;
+	font-style: italic;
 }
+
+
+
 
 @media (min-width: 768px) {
 	.block {
