@@ -2,16 +2,15 @@
 
 .nav-main__link,
 .nav-second__link {
-	font-size: 0.9125rem;
 	font-weight: 400;
+	font-size: 0.9375rem;
+}
+.nav-second__link {
+	padding: 0.65rem 1.1rem;
 }
 
-// @media (max-width: 767px) {
-// 	.page__title {
-// 		top: 50%;
-// 		margin-top: -1.25rem;
-// 	}
-// 	.nav-main {
-// 		z-index: 2000;
-// 	}
-// }
+@media (min-width: 768px) {
+	.nav-main {
+		margin-left: -15px;
+	}
+}
