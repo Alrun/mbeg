@@ -11,6 +11,21 @@
 		<title>МБ Инжиниринг Групп | Главная Страница</title>
 	</head>
 	<body class="page">
+		<style>
+			.slider-main__item {
+				position: relative;
+			}
+			.slider-main__item::after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(0,0,0,0.4);
+			}
+		</style>
 		<header class="header">
 			<div class="upline">
 				<div class="container">
@@ -60,8 +75,9 @@
 			<div class="header__container">
 				<div class="slider-bg hidden-sm-down">
 					<div class="slider-bg__item"><img class="slider-bg__img" src="img/1.jpg" alt=""></div>
-					<div class="slider-bg__item"><img class="slider-bg__img" src="img/2.jpg" alt=""></div>
-					<div class="slider-bg__item"><img class="slider-bg__img" src="img/3.jpg" alt=""></div>
+					<div class="slider-bg__item"><img class="slider-bg__img" data-lazy="img/2.jpg" alt=""></div>
+					<div class="slider-bg__item"><img class="slider-bg__img" data-lazy="img/3.jpg" alt=""></div>
+					<div class="slider-bg__item"><img class="slider-bg__img" data-lazy="img/4.jpg" alt=""></div>
 				</div>
 				<div class="header__line container">
 					<div class="nav-wrap row">
@@ -131,8 +147,9 @@
 							<div class="slider-main__item">
 								<p class="slider-main__text">Test 1</p><img class="slider-main__img" src="img/1.jpg" alt="">
 							</div>
-							<div class="slider-main__item"><img class="slider-main__img" src="img/2.jpg" alt=""></div>
-							<div class="slider-main__item"><img class="slider-main__img" src="img/3.jpg" alt=""></div>
+							<div class="slider-main__item"><img class="slider-main__img" data-lazy="img/2.jpg" alt=""></div>
+							<div class="slider-main__item"><img class="slider-main__img" data-lazy="img/3.jpg" alt=""></div>
+							<div class="slider-main__item"><img class="slider-main__img" data-lazy="img/4.jpg" alt=""></div>
 						</div>
 					</div>
 				</div>
@@ -245,37 +262,37 @@
 											<div class="slider-desc__text">Проектирование и дизайн</div>
 										</div>
 									</div>
-									<div class="slider-work__item"><img class="slider-work__img" src="img/work-4.jpg" alt="">
+									<div class="slider-work__item"><img class="slider-work__img" data-lazy="img/work-4.jpg" alt="">
 										<div class="slider-desc">
 											<h6 class="slider-desc__title">Здание общеобразовательной школы г.Санкт-Петербург, ул.Садовая</h6>
 											<div class="slider-desc__text">Проектирование и дизайн</div>
 										</div>
 									</div>
-									<div class="slider-work__item"><img class="slider-work__img" src="img/work-5.jpg" alt="">
+									<div class="slider-work__item"><img class="slider-work__img" data-lazy="img/work-5.jpg" alt="">
 										<div class="slider-desc">
 											<h6 class="slider-desc__title">ТК с административно-складскими зданиями г.Дзержинск</h6>
 											<div class="slider-desc__text">Проектирование и дизайн</div>
 										</div>
 									</div>
-									<div class="slider-work__item"><img class="slider-work__img" src="img/work-6.jpg" alt="">
+									<div class="slider-work__item"><img class="slider-work__img" data-lazy="img/work-6.jpg" alt="">
 										<div class="slider-desc">
 											<h6 class="slider-desc__title">Здания автотранспортного предприятия п.Федоровское</h6>
 											<div class="slider-desc__text">Проектирование и дизайн</div>
 										</div>
 									</div>
-									<div class="slider-work__item"><img class="slider-work__img" src="img/work-7.jpg" alt="">
+									<div class="slider-work__item"><img class="slider-work__img" data-lazy="img/work-7.jpg" alt="">
 										<div class="slider-desc">
 											<h6 class="slider-desc__title">ТК с административно-складскими зданиями г.Дзержинск</h6>
 											<div class="slider-desc__text">Проектирование и дизайн</div>
 										</div>
 									</div>
-									<div class="slider-work__item"><img class="slider-work__img" src="img/work-7.jpg" alt="">
+									<div class="slider-work__item"><img class="slider-work__img" data-lazy="img/work-7.jpg" alt="">
 										<div class="slider-desc">
 											<h6 class="slider-desc__title">ТК с административно-складскими зданиями г.Дзержинск</h6>
 											<div class="slider-desc__text">Проектирование и дизайн</div>
 										</div>
 									</div>
-									<div class="slider-work__item"><img class="slider-work__img" src="img/work-7.jpg" alt="">
+									<div class="slider-work__item"><img class="slider-work__img" data-lazy="img/work-7.jpg" alt="">
 										<div class="slider-desc">
 											<h6 class="slider-desc__title">ТК с административно-складскими зданиями г.Дзержинск</h6>
 											<div class="slider-desc__text">Проектирование и дизайн</div>

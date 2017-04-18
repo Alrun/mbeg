@@ -19,21 +19,11 @@
 .slider-bg__img {
 	width: 100%;
 }
+
 .slider-main {
 	position: relative;
 	max-width: 1170px;
 	margin: auto;
-}
-.slider-main__item {
-	position: relative;
-}
-.slider-main__item::before {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, .4);
 }
 .slider-main__img {
 	width: 100%;
