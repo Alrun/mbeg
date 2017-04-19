@@ -6,6 +6,17 @@
 	color: $title-color;
 	margin-bottom: -2rem;
 }
+.shop__link {
+	background-color: #fff;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 0 15px;
+	transition: all 1s;
+}
+.shop__link:hover {
+	box-shadow: 1px 1px 30px #fff;
+}
+
 
 .slider-work {
 	margin-bottom: 4rem;
@@ -16,10 +27,11 @@
 	padding: 15px;
 }
 .slider-desc {
-	background: lighten($main-bg, 10%);
+	min-height: 5.5rem;
 	padding: 10px;
 	border-bottom: 1px solid $main-color;
 	margin: -15px 15px 0;
+	background: lighten($main-bg, 10%);
 }
 .slider-desc__title {
 	margin: 0;

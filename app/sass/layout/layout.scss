@@ -7,18 +7,18 @@
 	text-shadow: 1px 0 0 #000;
 	transition: all 0.2s;
 	font-size: 0.8125rem;
+	letter-spacing: 1px;
 	
 	&:hover {
 		background-color: $main-color;
 	}
 }
 
-.btn-invert {
-	background-color: $main-color;
-	color: $second-color;
+.btn_invert {
+	color: $title-color;
 	transition: all 0.2s;
+
 	&:hover {
-		background-color: $title-color;
 		color: $second-color;
 	}
 }

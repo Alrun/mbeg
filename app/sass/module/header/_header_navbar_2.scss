@@ -1,12 +1,7 @@
 @import '../../../blocks/navbar/navbar_2/navbar_2';
 
-.nav-main__link,
-.nav-second__link {
-	font-weight: 400;
+.nav-main__link {
 	font-size: 0.9375rem;
-}
-.nav-second__link {
-	padding: 0.65rem 1.1rem;
 }
 
 @media (min-width: 768px) {

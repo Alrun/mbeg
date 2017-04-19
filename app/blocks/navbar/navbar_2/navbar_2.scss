@@ -7,6 +7,7 @@
 	text-align: right;
 }
 .nav-main__item {
+	font-weight: normal;
 	position: relative;
 	display: inline-block;
 	color: darken($title-color, 15%);
@@ -15,10 +16,11 @@
 		color: $title-color;
 	}
 	&:not(:first-child) {
-		margin-left: 1.15rem;
+		margin-left: 0.75rem;
 	}
 }
 .nav-main__item_active {
+	font-weight: 500;
 	color: $main-color;
 	
 	&:hover {
@@ -32,7 +34,8 @@
 }
 .nav-main__link {
 	white-space: nowrap;
-	font-size: 0.9375rem;
+	font-size: 1rem;
+	font-weight: inherit;
 	text-transform: uppercase;
 	text-align: left;
 	color: inherit;
@@ -41,6 +44,7 @@
 .nav-second__item {
 	color: darken($title-color, 40%);
 	position: relative;
+	font-weight: normal;
 
 	&:hover {
 		color: $title-color;
@@ -73,10 +77,11 @@
 }
 .nav-second__link {
 	display: block;
-	padding: .65rem 1.4rem;
+	padding: .65rem 1.75rem;
 	border-bottom: 2px solid lighten($second-color, 10%);
 	white-space: nowrap;
-	font-size: 0.9375rem;
+	font-size: 1rem;
+	font-weight: inherit;
 	text-align: left;
 	transition: 0.25s;
 	background-color: #000;
