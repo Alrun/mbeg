@@ -1,10 +1,17 @@
 .welcome,
 .shop {
-	font-size: 1.5rem;
+	margin-bottom: 2rem;
+}
+.welcome__item,
+.shop__item {
 	font-style: italic;
 	text-transform: uppercase;
-	color: $title-color;
-	margin-bottom: -2rem;
+}
+.welcome__text,
+.shop__text {
+	line-height: 1;
+	margin: 0;
+	padding: 0;
 }
 .shop__link-wrap {
 	margin-bottom: 1rem;

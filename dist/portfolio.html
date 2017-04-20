@@ -25,6 +25,9 @@
 				right: 0;
 				background-color: rgba(0,0,0,0.3);
 			}
+			.slider-main .slider-main__hero {
+				display: none;
+			}
 		</style>
 		<header class="header">
 			<div class="upline">
@@ -145,11 +148,25 @@
 					<div class="row">
 						<div class="slider-main">
 							<div class="slider-main__item">
-								<p class="slider-main__text">Test 1</p><img class="slider-main__img" src="img/1.jpg" alt="">
+								<div class="slider-main__hero">
+									<div class="slider-main__text">МБ Инжиниринг</div>
+								</div><img class="slider-main__img" src="img/1.jpg" alt="">
 							</div>
-							<div class="slider-main__item"><img class="slider-main__img" data-lazy="img/2.jpg" alt=""></div>
-							<div class="slider-main__item"><img class="slider-main__img" data-lazy="img/3.jpg" alt=""></div>
-							<div class="slider-main__item"><img class="slider-main__img" data-lazy="img/4.jpg" alt=""></div>
+							<div class="slider-main__item">
+								<div class="slider-main__hero">
+									<div class="slider-main__text">Оборудование</div>
+								</div><img class="slider-main__img" data-lazy="img/2.jpg" alt="">
+							</div>
+							<div class="slider-main__item">
+								<div class="slider-main__hero">
+									<div class="slider-main__text">Проектирование</div>
+								</div><img class="slider-main__img" data-lazy="img/3.jpg" alt="">
+							</div>
+							<div class="slider-main__item">
+								<div class="slider-main__hero">
+									<div class="slider-main__text">Монтаж</div>
+								</div><img class="slider-main__img" data-lazy="img/4.jpg" alt="">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -170,7 +187,7 @@
 						</div>
 					</div>
 					<div class="col-md-12">
-						<h1 class="h4">Портфолио строительной компании</h1>
+						<h1 class="h3">Портфолио строительной компании</h1>
 						<p>Компания ООО «МБ Инжиниринг Групп» работает на строительном рынке России более 20 лет, с 1992 года. Основное направление деятельности – проектирование и строительство «под ключ» индивидуальных жилых домов, коттеджных поселков, многоквартирных домов малой и средней этажности, административных и общественных зданий.</p>
 						<p>Наличие солидной производственной базы, транспорта, механизмов, системы складов позволяет успешно конкурировать с подобными строительными организациями по ЦЕНЕ, СРОКАМ и КАЧЕСТВУ выполняемых ремонтно-строительных работ.</p>
 						<p>За время существования компании реализовано более трехсот проектов в Москве, Подмосковье, городах России и ближнего зарубежья.</p>
@@ -181,7 +198,6 @@
 					<div class="block-t">
 						<div class="block-t__wrap">
 							<div class="block-t__content block-t_w50">
-								<div class="welcome text-xs-center"></div>
 								<h2 class="home__title text-xs-center">Основные выполненные проектные работы</h2>
 								<div class="svg-wrap text-xs-center">
 									<svg class="svg-logo ">
@@ -190,7 +206,6 @@
 								</div>
 							</div>
 							<div class="block-t__content block-t_w50">
-								<div class="shop text-xs-center"> </div>
 								<h2 class="home__title text-xs-center">Основные выполненные монтажные работы</h2>
 								<div class="svg-wrap text-xs-center">
 									<svg class="svg-logo ">
@@ -208,56 +223,10 @@
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__container container">
-				<div class="footer__row row">
-					<div class="footer__item col-md-6 col-lg-3 col-xl-4">
-						<div class="logo">
-							<div class="logo__img">
-								<svg class="svg-logo ">
-									<use xlink:href="#logo"></use>
-								</svg>
-							</div>
-							<p class="logo__text">Общество с ограниченной ответственностью «МБ Инжиниринг Групп» (ООО «МБИ») – это профессиональная команда инженеров-проектировщиков и монтажников, которая предлагает Вам свои услуги в области проетирования и строительства различных объектов недвижимости и инженерных систем.</p>
-						</div>
-					</div>
-					<div class="footer__item col-md-6 col-lg-3 col-xl-3 text-sm-right text-lg-left">
-						<h3 class="footer__title">Карта сайта</h3>
-						<div class="footer-nav">
-							<ul class="footer-nav__list">
-								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Главная</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="#">О компании</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Проектирование</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Монтаж</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Портфолио</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__item col-md-6 col-lg-3 col-xl-3">
-						<h3 class="footer__title">Адрес</h3>
-						<address class="address">
-							<p class="address__text">г.Санкт-Петербург, ул.Якорная, д.13, литер А, офис 311. <a class="address__link" href="#">Карта</a></p>
-							<div class="address__text">Тел: <span class="text_main-color">+7 (812) 937 59 77</span></div>
-							<div class="address__text">E-mail: info@mbeg.ru</div>
-						</address>
-					</div>
-					<div class="footer__item col-md-6 col-lg-3 col-xl-2 text-sm-right text-lg-left">
-						<h3 class="footer__title">Поделиться</h3>
-						<div class="share"><a class="share__link" href="">
-								<svg class="svg-upline__e-mail ">
-									<use xlink:href="#upline__e-mail"></use>
-								</svg></a><a class="share__link" href="">
-								<svg class="svg-upline__e-mail ">
-									<use xlink:href="#upline__e-mail"></use>
-								</svg></a><a class="share__link" href="">
-								<svg class="svg-upline__e-mail ">
-									<use xlink:href="#upline__e-mail"></use>
-								</svg></a></div>
-					</div>
-				</div>
+			<div class="container">
 				<div class="footer__row row">
 					<div class="col-xs-10 offset-xs-1">
-						<h2>Наши партнеры</h2>
+						<h2 class="h2">Наши партнеры</h2>
 						<div class="row">
 							<div class="slider-partner text-xs-center">
 								<div class="slider-partner__item"><a class="slider-partner__link" href="#">
@@ -315,7 +284,44 @@
 			</div>
 			<div class="footer__downline">
 				<div class="container">
-					<h6 class="downline__text text-xs-center">©2017 МБ Инжиниринг Групп</h6>
+					<div class="footer__container">
+						<div class="footer__row row">
+							<div class="footer__item col-md-4">
+								<p>Карта сайта | Контакты | Карьера</p>
+								<p class="cl-grey">© 2012 - 2017 ООО «МБ Инжиниринг Групп». Все права защищены</p>
+							</div>
+							<div class="footer__item col-md-5">
+								<address class="address">
+									<div class="address__text"><span class="cl-grey">E-mail: </span><span>info@mbeg.ru</span></div>
+									<div class="address__text"><span class="cl-grey">Телефон:  </span><span>+7 (812) 937 59 77</span></div>
+									<div class="address__text"><span class="cl-grey">Главный офис: </span><span>г.Санкт-Петербург, ул.Якорная, д.13, литер А, офис 311. </span></div>
+								</address>
+							</div>
+							<div class="footer__item col-md-3">
+								<div class="share text-md-right"><a class="share__link" href="">
+										<svg class="svg-upline__e-mail ">
+											<use xlink:href="#upline__e-mail"></use>
+										</svg></a><a class="share__link" href="">
+										<svg class="svg-upline__e-mail ">
+											<use xlink:href="#upline__e-mail"></use>
+										</svg></a><a class="share__link" href="">
+										<svg class="svg-upline__e-mail ">
+											<use xlink:href="#upline__e-mail"></use>
+										</svg></a><a class="share__link" href="">
+										<svg class="svg-upline__e-mail ">
+											<use xlink:href="#upline__e-mail"></use>
+										</svg></a><a class="share__link" href="">
+										<svg class="svg-upline__e-mail ">
+											<use xlink:href="#upline__e-mail"></use>
+										</svg></a></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="footer__item col-xs-12">
+								<p class="cl-grey">Все права на информацию и материалы (включая изображения и товарные знаки) охраняются законом и принадлежат ООО «МБ Инжиниринг Групп». Не допускается полное или частичное копирование и использование информации и материалов, размещенных на сайте www.mbeg.com, без письменного разрешения правообладателя.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>

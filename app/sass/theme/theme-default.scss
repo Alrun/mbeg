@@ -2,6 +2,24 @@
 	background-color: lighten($second-color, 12%);
 	background-image: url("../img/fon.png")
 }
+
+.footer {
+	padding-top: 0;
+}
+footer h2 {
+	margin-top: 0;
+}
+.footer__container {
+	font-size: 0.8rem;
+}
+
+.cl-grey {
+	color: grey;
+}
+.footer__downline {
+	padding-top: 2rem;
+}
+
 // .block {
 // 	background-color: #000;
 // }
