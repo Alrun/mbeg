@@ -6,11 +6,14 @@
 	color: $title-color;
 	margin-bottom: -2rem;
 }
+.shop__link-wrap {
+	margin-bottom: 1rem;
+}
 .shop__link {
-	background-color: #fff;
 	display: inline-block;
-	border-radius: 10px;
 	padding: 0 15px;
+	border-radius: 10px;
+	background-color: #fff;
 	transition: all 1s;
 }
 .shop__link:hover {
@@ -68,7 +71,4 @@
 }
 .why__text {
 	font-size: 0.9375rem;
-}
-.why__icon svg {
-	font-size: 50px;
 }

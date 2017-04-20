@@ -90,6 +90,9 @@
 		background: $main-color;
 	}
 }
+.nav-second__item:last-child .nav-second__link {
+	border-width: 3px;
+}
 .nav-second_dropdown {
 	position: absolute;
 	top: -9999px;

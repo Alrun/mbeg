@@ -10,16 +10,8 @@
 	letter-spacing: 1px;
 	
 	&:hover {
-		background-color: $main-color;
-	}
-}
-
-.btn_invert {
-	color: $title-color;
-	transition: all 0.2s;
-
-	&:hover {
 		color: $second-color;
+		background-color: $main-color;
 	}
 }
 

@@ -72,13 +72,14 @@ h1, h2,
 	text-transform: uppercase;
 	font-weight: 400;
 }
-h1,
-.h1 {
+h1 {
   margin-bottom: 2rem;
   padding: 0;
-  padding-top: 2rem;
   font-style: italic;
   line-height: 0.9;
+}
+.h1 {
+  margin-bottom: 2rem;
 }
 
 h2,
