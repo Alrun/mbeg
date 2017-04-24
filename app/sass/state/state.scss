@@ -58,68 +58,68 @@
 }
 
 /* <span class="break-xs-up">Перенос строки</span> */
-.break-xs-up::after {
+.break-xs-up::before {
   content: "\A";
   white-space: pre;
 }
 
 @media (max-width: 543px) {
-  .break-xs-down::after {
+  .break-xs-down::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 @media (min-width: 544px) {
-  .break-sm-up::after {
+  .break-sm-up::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 @media (max-width: 767px) {
-  .break-sm-down::after {
+  .break-sm-down::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 @media (min-width: 768px) {
-  .break-md-up::after {
+  .break-md-up::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 @media (max-width: 991px) {
-  .break-md-down::after {
+  .break-md-down::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 @media (min-width: 992px) {
-  .break-lg-up::after {
+  .break-lg-up::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 @media (max-width: 1199px) {
-  .break-lg-down::after {
+  .break-lg-down::before {
     content: "\A";
     white-space: pre;
   }
 }
 
 @media (min-width: 1200px) {
-  .break-xl-up::after {
+  .break-xl-up::before {
     content: "\A";
     white-space: pre;
   }
 }
 
-.break-xl-down::after {
+.break-xl-down::before {
   content: "\A";
   white-space: pre;
 }
@@ -185,6 +185,13 @@
 .text_main-color {
   color: $main-color;
 }
+.text_second-color {
+  color: $second-color;
+}
 .text_title-color {
   color: $title-color;
+}
+
+.bg_second-color {
+  background-color: $second-color;
 }

@@ -1,15 +1,21 @@
 .upline {
 	background-color: #000;
 }
+.upline svg {
+	vertical-align: bottom;
+}
 .upline__item {
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+.upline__img {
+	float: left;
 }
 .upline__text {
 	display: inline-block;
 	padding-bottom: 0.25em;
 	margin: 0;
-	vertical-align: bottom;
+	vertical-align: middle;
 	font-style: normal;
 }
 .upline__text:not(:first-child) {
@@ -28,5 +34,8 @@
 @media (max-width: 767px) {
 	.upline {
 		background-color: transparent !important;
+	}
+	.svg-upline__e-mail {
+		margin: 0 4px;
 	}
 }

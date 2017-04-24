@@ -4,16 +4,32 @@ section h4 {
 .home section h2 {
 	text-align: center;
 }
+main {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+.home {
+	margin-bottom: 0;
+}
 
 .block {
 	position: relative;
 	padding: 0 20px 30px;
 	border-bottom: 1px solid $main-color;
-	margin-bottom: 30px;
+	// margin-bottom: 30px;
 	background: $main-bg;
 }
+
 .block-t {
 	margin-top: 30px;
+}
+
+.block-t__img {
+	vertical-align: top;
+}
+.block-t__img img {
+	width: 100%;
+	vertical-align: top;
 }
 
 .uslugi__item {
@@ -61,12 +77,23 @@ section h4 {
 	}
 	.block-t__content {
 		display: table-cell;
-		background: $main-bg;
-		padding: 30px 20px 50px;
+		padding: 0 20px 50px;
 		border-bottom: 1px solid $main-color;
+		vertical-align: top;
+		background: $main-bg;
+	}
+	.block-t__img {
+		display: table-cell;
+		padding: 0;
+	}
+	.block-t_w66 {
+		width: 66.66667%;
 	}
 	.block-t_w50 {
 		width: 50%;
+	}
+	.block-t_w33 {
+		width: 33.33333%;
 	}
 }
 
@@ -78,10 +105,13 @@ section h4 {
 		background: $main-bg;
 		padding-bottom: 3rem;
 	}
+	.block-t__img {
+		margin-bottom: 30px;
+	}
 }
 @media (min-width: 992px) {
 	.block {
-		margin: 30px 0;
+		margin: 30px 0 0;
 	}
 }
 @media (max-width: 991px) {

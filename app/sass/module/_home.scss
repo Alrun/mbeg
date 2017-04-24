@@ -1,5 +1,6 @@
 .welcome,
 .shop {
+	padding-top: 2rem;
 	margin-bottom: 2rem;
 }
 .welcome__item,
@@ -36,34 +37,6 @@
 	width: 100%;
 	padding: 15px;
 }
-.slider-desc {
-	min-height: 5.5rem;
-	padding: 10px;
-	border-bottom: 1px solid $main-color;
-	margin: -15px 15px 0;
-	background: lighten($main-bg, 10%);
-}
-.slider-desc__title {
-	margin: 0;
-	font-size: 0.9375rem;
-	font-style: normal;
-	font-weight: 300;
-	color: $title-color;
-
-	&::after {
-		content: "";
-		display: block;
-		width: 35%;
-		border-bottom: 1px solid $title-color;
-		margin: 5px 0;
-	}
-}
-.slider-desc__text {
-	font-style: italic;
-	font-size: 0.875rem;
-	font-weight: 200;
-}
-
 
 .slider-work .slick-dots {
 	text-align: center;	
@@ -73,9 +46,22 @@
 }
 
 
+.home__why {
+	position: relative;
+	padding-bottom: 150px;
+}
 .why__item {
 	margin-bottom: 2rem;
 }
 .why__text {
 	font-size: 0.9375rem;
+}
+.building {
+	position: absolute;
+	bottom: 0;
+	opacity: 0.2;
+}
+.building__img {
+	width: 100%;
+	vertical-align: bottom;
 }

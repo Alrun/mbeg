@@ -7,6 +7,37 @@
 @import 'header/header';
 
 @import 'breadcrumbs';
+
+.work-desc {
+	min-height: 5.5rem;
+	padding: 10px;
+	border-bottom: 1px solid $main-color;
+	margin: -15px 15px 0;
+	background: lighten($main-bg, 10%);
+}
+.work-desc__title {
+	margin: 0;
+	font-size: 0.9375rem;
+	font-style: normal;
+	font-weight: 300;
+	color: $title-color;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 35%;
+		border-bottom: 1px solid $title-color;
+		margin: 5px 0;
+	}
+}
+.work-desc__text {
+	font-style: italic;
+	font-size: 0.875rem;
+	font-weight: 200;
+}
+
 @import 'home';
+@import 'portfolio';
+@import 'contacts';
 
 @import 'footer';

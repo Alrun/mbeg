@@ -3,22 +3,35 @@
 	background-image: url("../img/fon.png")
 }
 
-.footer {
-	padding-top: 0;
+section:last-child {
+	margin-bottom: 3rem;
 }
-footer h2 {
-	margin-top: 0;
+.home__projects {
+	margin-top: 2rem;
 }
-.footer__container {
-	font-size: 0.8rem;
+.home__why {
+	margin-bottom: 0 !important;
 }
 
-.cl-grey {
-	color: grey;
+.logo__text {
+	padding-right: 70px;
+	color: $text-color;
 }
-.footer__downline {
-	padding-top: 2rem;
+.footer__container,
+.downline__text {
+	font-size: 0.8125rem;
 }
+.footer h3,
+.footer h2 {
+	font-size: 1rem;
+}
+
+// .cl-grey {
+// 	color: grey;
+// }
+// .footer__downline {
+// 	padding-top: 2rem;
+// }
 
 // .block {
 // 	background-color: #000;
