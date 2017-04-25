@@ -44,109 +44,114 @@ main.home
 								img(src="img/shop.png").shop__img
 
 	section.home__uslugi.container
-		.block.row
-			h2.h2 К вашим услугам
-			.uslugi.row
-				.uslugi__item.col-md-6.col-lg-3.text-xs-center
-					.uslugi__icon
-						+svg-icon('logo')
-					h4.uslugi__title Проектировщики
-					a(href="#").uslugi__link.btn Подробнее
-				.uslugi__item.col-md-6.col-lg-3.text-xs-center
-					.uslugi__icon
-						+svg-icon('logo')
-					h4.uslugi__title Монтажники
-					a(href="#").uslugi__link.btn Подробнее
-				.uslugi__item.col-md-6.col-lg-3.text-xs-center
-					.uslugi__icon
-						+svg-icon('logo')
-					h4.uslugi__title Менеджеры
-					a(href="#").uslugi__link.btn Подробнее
-				.uslugi__item.col-md-6.col-lg-3.text-xs-center
-					.uslugi__icon
-						+svg-icon('logo')
-					h4.uslugi__title Калькулятор
-					a(href="#").uslugi__link.btn Рассчитать
+		.row.block
+			.col-xs-12
+				h2 К вашим услугам
+			.col-xs-12
+				.uslugi
+					.uslugi__item.col-md-6.col-lg-3.text-xs-center
+						.uslugi__icon
+							+svg-icon('logo')
+						h4.uslugi__title Проектировщики
+						a(href="#").uslugi__link.btn Подробнее
+					.uslugi__item.col-md-6.col-lg-3.text-xs-center
+						.uslugi__icon
+							+svg-icon('logo')
+						h4.uslugi__title Монтажники
+						a(href="#").uslugi__link.btn Подробнее
+					.uslugi__item.col-md-6.col-lg-3.text-xs-center
+						.uslugi__icon
+							+svg-icon('logo')
+						h4.uslugi__title Менеджеры
+						a(href="#").uslugi__link.btn Подробнее
+					.uslugi__item.col-md-6.col-lg-3.text-xs-center
+						.uslugi__icon
+							+svg-icon('logo')
+						h4.uslugi__title Калькулятор
+						a(href="#").uslugi__link.btn Рассчитать
 
 	section.home__projects
 		.container
 			.row
-				h2.h2 Основные проекты
+				.col-xs-12
+					h2 Основные проекты
 			.row
 				.offset-xs-1.col-xs-10
-					.row
-						.slider-work
-							.slider-work__item
-								img(src="img/work-1.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title Административное здание г.Санкт-Петербург
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(src="img/work-2.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title Коттеджный поселок «Суходольское» п.Громово
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(src="img/work-3.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title 12-ти секционный жилой дом г.Домодедово
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(data-lazy="img/work-4.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title Здание общеобразовательной школы г.Санкт-Петербург, ул.Садовая
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(data-lazy="img/work-5.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(data-lazy="img/work-6.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title Здания автотранспортного предприятия п.Федоровское
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(data-lazy="img/work-7.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(data-lazy="img/work-7.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
-									.work-desc__text Проектирование
-							.slider-work__item
-								img(data-lazy="img/work-7.jpg" alt="").slider-work__img
-								.work-desc
-									h6.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
-									.work-desc__text Проектирование
+					.slider-work
+						.slider-work__item
+							img(src="img/work-1.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title Административное здание г.Санкт-Петербург
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(src="img/work-2.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title Коттеджный поселок «Суходольское» п.Громово
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(src="img/work-3.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title 12-ти секционный жилой дом г.Домодедово
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(data-lazy="img/work-4.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title Здание общеобразовательной школы г.Санкт-Петербург, ул.Садовая
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(data-lazy="img/work-5.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(data-lazy="img/work-6.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title Здания автотранспортного предприятия п.Федоровское
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(data-lazy="img/work-7.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(data-lazy="img/work-7.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
+								.work-desc__text Проектирование
+						.slider-work__item
+							img(data-lazy="img/work-7.jpg" alt="").slider-work__img
+							.work-desc
+								h5.work-desc__title ТК с административно-складскими зданиями г.Дзержинск
+								.work-desc__text Проектирование
 			.row
 				.slider-work__btn-wrap.col-xs-12.text-xs-center
 					a(href="#").slider-work__btn.btn Показать все
 
-	section.home__why.container
-		h2.h2 Почему мы?
-		.why.row
-			.why__item.col-md-6.col-lg-3.push-lg-3.text-xs-center
-				.why__icon
-					+svg-icon('logo')
-				h4.why__title Команда
-				p.why__text Архитекторы. Строители. Менеджеры проекта. Каждый успешный проект начинается с успешной команды.
-			.why__item.col-md-6.col-lg-3.pull-lg-3.text-xs-center
-				.why__icon
-					+svg-icon('logo')
-				h4.why__title Опыт
-				p.why__text Высокий уровень квалификации и профессионализм сотрудников нашей компании позволяют создавать и реализовывать проекты любой сложности, соответствующие самым строгим требованиям наших заказчиков.
-			.why__item.col-md-6.col-lg-3.text-xs-center
-				.why__icon
-					+svg-icon('logo')
-				h4.why__title Оптимизация
-				p.why__text Мы работаем в рамках вашего графика и бюджета. Умело применяем здравый смысл и инновационный подход для экономии ваших времени и денег от начала строительства до его завершения.
-			.why__item.col-md-6.col-lg-3.text-xs-center
-				.why__icon
-					+svg-icon('logo')
-				h4.why__title Технологии
-				p.why__text Все работы выполняются в соответствии с требованиями нормативной документации, с применением современных материалов и оборудования.
-		.building
-			img(src="img/building.png").building__img
+	section.home__why
+		.container
+			.row
+				.col-xs-12
+					h2 Почему мы?
+			.row.why
+				.why__item.col-md-6.col-lg-3.push-lg-3.text-xs-center
+					.why__icon
+						+svg-icon('logo')
+					h4.why__title Команда
+					p.why__text.text-xs-left.text-lg-center Архитекторы. Строители. Менеджеры проекта. Каждый успешный проект начинается с успешной команды.
+				.why__item.col-md-6.col-lg-3.pull-lg-3.text-xs-center
+					.why__icon
+						+svg-icon('logo')
+					h4.why__title Опыт
+					p.why__text.text-xs-left.text-lg-center Высокий уровень квалификации и профессионализм сотрудников нашей компании позволяют создавать и реализовывать проекты любой сложности, соответствующие самым строгим требованиям наших заказчиков.
+				.why__item.col-md-6.col-lg-3.text-xs-center
+					.why__icon
+						+svg-icon('logo')
+					h4.why__title Оптимизация
+					p.why__text.text-xs-left.text-lg-center Мы работаем в рамках вашего графика и бюджета. Умело применяем здравый смысл и инновационный подход для экономии ваших времени и денег от начала строительства до его завершения.
+				.why__item.col-md-6.col-lg-3.text-xs-center
+					.why__icon
+						+svg-icon('logo')
+					h4.why__title Технологии
+					p.why__text.text-xs-left.text-lg-center Все работы выполняются в соответствии с требованиями нормативной документации, с применением современных материалов и оборудования.
+			.building
+				img(src="img/building.png").building__img

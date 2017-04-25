@@ -53,6 +53,9 @@ h4, .h4 {font-size: 1.3125rem;}
 h5, .h5 {font-size: 1.125rem;}
 h6, .h6 {font-size: 1rem;}
 
+h1, h2 {
+  margin-bottom: 0;
+}
 .h1 {
   color: $title-color;
 }
@@ -87,7 +90,7 @@ h4,
 }
 h5, h6,
 .h5, .h6 {
-  color: darken($title-color, 45%);
+  color: darken($title-color, 55%);
 }
 
 h6,

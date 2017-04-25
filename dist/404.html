@@ -12,6 +12,9 @@
 	</head>
 	<body class="page">
 		<style>
+			.slider-main {
+				max-height: 380px;
+			}
 			.slider-main__item {
 				position: relative;
 			}
@@ -104,7 +107,7 @@
 								<div class="navbar__container">
 									<div class="navbar__mobile"><span class="navbar__icon"></span>
 										<label class="navbar__toggler" for="nav-mini"></label>
-										<h3 class="page__title">Главная</h3>
+										<h3 class="nav__page-title">Главная</h3>
 									</div>
 									<ul class="nav-main">
 										<li class="nav-main__item nav-main__item_active"><a class="nav-main__link" href="index.html">Главная</a></li>
@@ -177,13 +180,15 @@
 			<div class="footer__container container">
 				<div class="footer__row row">
 					<div class="footer__item col-md-6 col-lg-3 col-xl-4">
-						<div class="logo">
-							<div class="logo__img">
-								<svg class="svg-logo ">
-									<use xlink:href="#logo"></use>
-								</svg>
+						<div class="footer__logo">
+							<div class="logo">
+								<div class="logo__img">
+									<svg class="svg-logo ">
+										<use xlink:href="#logo"></use>
+									</svg>
+								</div>
+								<p class="logo__text">Общество с ограниченной ответственностью «МБ Инжиниринг Групп» (ООО «МБИ») – это профессиональная команда инженеров-проектировщиков и монтажников, которая предлагает Вам свои услуги в области проетирования и строительства различных объектов недвижимости и инженерных систем.</p>
 							</div>
-							<p class="logo__text">Общество с ограниченной ответственностью «МБ Инжиниринг Групп» (ООО «МБИ») – это профессиональная команда инженеров-проектировщиков и монтажников, которая предлагает Вам свои услуги в области проетирования и строительства различных объектов недвижимости и инженерных систем.</p>
 						</div>
 					</div>
 					<div class="footer__item col-md-6 col-lg-3 col-xl-3 text-sm-right text-lg-left">
@@ -281,7 +286,7 @@
 			</div>
 			<div class="footer__downline">
 				<div class="container">
-					<h6 class="downline__text text-xs-center">©2017 МБ Инжиниринг Групп</h6>
+					<h5 class="downline__text text-xs-center">©2017 МБ Инжиниринг Групп</h5>
 				</div>
 			</div>
 		</footer>
