@@ -6,9 +6,9 @@
 		display: block;
 		position: absolute;
 		top: -1px;
-		left: -1px;
+		left: 0;
 		bottom: -1px;
-		right: -1px;
+		right: 0;
 		background-color: rgba(0,0,0,0.5);
 		transition: 0.3s;
 	}
@@ -16,7 +16,7 @@
 .works-sep__item:hover::before {
 	background-color: rgba(0,0,0,0.7);
 }
-.works-sep__container {
+.works-sep__content {
 	position: absolute;
 	top: 15%;
 }
@@ -25,11 +25,11 @@
 	color: $title-color;
 	text-shadow: 0 1px 0 #000;
 }
-.works-sep__btn {
+.works-sep__link {
 	opacity: 0;
 	transition: 0.3s;
 }
-.works-sep__item:hover .works-sep__btn {
+.works-sep__item:hover .works-sep__link {
 	opacity: 1;
 }
 
