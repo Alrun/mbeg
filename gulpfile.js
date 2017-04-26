@@ -280,8 +280,9 @@ gulp.task('server', ['develop'], function() {
 		server: 'dist'
 	});
 
-	gulp.watch('app/**/*.pug', ['pug']);
 	gulp.watch('app/**/*.scss', ['sass:dev']);
+	gulp.watch('app/**/*.pug', ['pug']);
+	gulp.watch('dist/*.html').on('change', bs.reload);
 	// gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
 		// .on('change', bs.reload);
 	// gulp.watch('app/js/**/*.*', ['scripts'])
