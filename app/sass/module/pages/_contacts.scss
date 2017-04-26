@@ -1,0 +1,15 @@
+.contacts__img-wrap {
+	overflow: hidden;
+}
+.contacts__img {
+	width: 100%;
+}
+.contacts iframe {
+	width: 100%;
+}
+.contacts-address__title {
+	color: darken($title-color, 10%);
+}
+.contacts-address__btn {
+	margin-top: 1rem;
+}

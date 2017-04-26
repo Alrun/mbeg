@@ -1,31 +1,36 @@
 header.header
-	.upline
-		.container
-			.upline-logo.row.hidden-md-up
-				.logo.col-sm-12
-					.logo__img
-						+svg-icon('logo')
-					.logo-desc
-						h6.logo-desc__text Создание проектной документации
-						h6.logo-desc__text Строительно-монтажные работы
-						h6.logo-desc__text Продажа светодиодного оборудования
-			.row
-				.upline__item.col-xs-8.col-sm-6.col-md-4.col-lg-3
-					.upline__img
-						+svg-icon('upline__phone')
-					h6.upline__text.text_main-color +7 (812) 937 59 77
-
-				.upline__item.col-xs-4.col-sm-6.col-md-4.push-md-4.push-lg-5
-					.social.text-xs-right
-						a(href="#").social__link
+	.header__item
+		.upline
+			.container
+				.upline-logo.row.hidden-md-up
+					.logo.col-sm-12
+						a(href="index.html").logo__link
+							.logo__icon
+								+svg-icon('logo')
+							.logo-desc
+						h5.logo-desc__text Создание проектной документации
+						h5.logo-desc__text Строительно-монтажные работы
+						h5.logo-desc__text Продажа светодиодного оборудования
+				.row
+					.upline__item.col-xs-8.col-sm-6.col-md-4.col-lg-3
+						.upline__icon
 							+svg-icon('upline__phone')
-						a(href="#").social__link
-							+svg-icon('upline__phone')
+						h6.upline__text.cl_main +7 (812) 937 59 77
 
-				.upline__item.col-xs-12.col-md-4.pull-md-4.pull-md-4
-					.upline__img
-						+svg-icon('upline__e-mail')
-					h6.upline__text.text_main-color info@mbeg.ru
+					.upline__item.col-xs-4.col-sm-6.col-md-4.push-md-4.push-lg-5
+						.social.text-xs-right
+							span Мы с социальных сетях:
+							a(href="#").social__link
+								.social__icon
+									+svg-icon('upline__phone')
+							a(href="#").social__link
+								.social__icon
+									+svg-icon('upline__phone')
+
+					.upline__item.col-xs-12.col-md-4.pull-md-4.pull-md-4
+						.upline__icon
+							+svg-icon('upline__e-mail')
+						h6.upline__text.cl_main info@mbeg.ru
 
 	.header__container
 		.slider-bg.hidden-sm-down
@@ -42,12 +47,13 @@ header.header
 			.nav-wrap.row
 				.header-logo.hidden-sm-down.col-lg-4.col-xl-5
 					.logo
-						.logo__img
-							+svg-icon('logo')
+						a(href="index.html").logo__link
+							.logo__icon
+								+svg-icon('logo')
 						.logo-desc.hidden-lg-down
-							h6.logo-desc__text Создание проектной документации
-							h6.logo-desc__text Строительно-монтажные работы
-							h6.logo-desc__text Продажа светодиодного оборудования
+							h5.logo-desc__text Создание проектной документации
+							h5.logo-desc__text Строительно-монтажные работы
+							h5.logo-desc__text Продажа светодиодного оборудования
 				nav.header-nav.col-sm-12.col-lg-8.col-xl-7
 					include ../../blocks/navbar/navbar_2/navbar_2
 

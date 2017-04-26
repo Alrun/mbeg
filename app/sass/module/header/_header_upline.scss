@@ -8,13 +8,14 @@
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-.upline__img {
+.upline__icon {
 	float: left;
 }
 .upline__text {
 	display: inline-block;
 	padding-bottom: 0.25em;
 	margin: 0;
+	text-transform: lowercase;
 	vertical-align: middle;
 	font-style: normal;
 }
