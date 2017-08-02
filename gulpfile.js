@@ -21,9 +21,9 @@ var gulp = require('gulp'),
 		imagemin = require('gulp-imagemin'), // minify png, jpg, gif
 		pngquant = require('imagemin-pngquant'), // сжатие png
 		rename = require('gulp-rename'), // переименование файлов
-		concat = require('gulp-concat'); // объединение js файлов в один
-		// uglify = require('gulp-uglifyjs')
-
+		concat = require('gulp-concat'), // объединение js файлов в один
+		uglify = require('gulp-uglify'), // минификация js
+		sitemap = require('gulp-sitemap');
 
 // Favicon
 var realFavicon = require('gulp-real-favicon'),
@@ -31,6 +31,7 @@ var realFavicon = require('gulp-real-favicon'),
 
 var FAVICON_DATA_FILE = 'faviconData.json';
 
+// Создание фавикона
 gulp.task('favicon:generate', function(done) {
 	realFavicon.generateFavicon({
 		masterPicture: 'app/img/favicon.png', // нужно поменять, если svg или jpg
@@ -96,12 +97,14 @@ gulp.task('favicon:generate', function(done) {
 	});
 });
 
+// Добавление фавикона в код HTML
 gulp.task('favicon:inject', function() {
 	return gulp.src('dist/*.html')
 		.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
 		.pipe(gulp.dest('dist'));
 });
 
+// Обновление фавикона
 gulp.task('favicon:update', function(done) {
 	var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
 	realFavicon.checkForUpdates(currentVersion, function(err) {
@@ -154,17 +157,17 @@ gulp.task('svgSprite', function () {
 		.pipe(gulpIf('*.scss', gulp.dest('./app/sass/svg-sprite'), gulp.dest('dist/img')));
 });
 
-gulp.task('pngSprite', function() {
-	return gulp.src('dist/img/sprite.svg')
-		.pipe(svg2png())
-		.pipe(gulp.dest('dist/img'));
-});
+// gulp.task('pngSprite', function() {
+// 	return gulp.src('dist/img/sprite.svg')
+// 		.pipe(svg2png())
+// 		.pipe(gulp.dest('dist/img'));
+// });
 
-gulp.task('sprite', sequence('svgSprite', ['pngSprite', 'sass:dev']));
+// gulp.task('sprite', sequence('svgSprite', ['pngSprite', 'sass:dev']));
 
 
 // Pug
-gulp.task('pug', function() {
+gulp.task('pug:dev', function() {
 	return gulp.src(['./app/*.pug', '!./app/html/**/_*.pug'])
 		.pipe(plumber({
 			errorHandler: notify.onError(function(err) {
@@ -174,7 +177,7 @@ gulp.task('pug', function() {
 				};
 			})
 		}))
-		.pipe(newer('./app/**/*.pug'))
+		//.pipe(newer('./app/**/*.pug'))
 		.pipe(pug({
 			pretty: '\t' // false - default, true - space, '\t' - tab
 		}))
@@ -182,10 +185,19 @@ gulp.task('pug', function() {
 		.pipe(bs.stream());
 });
 
+// HTML minification for PRODUCTION
+gulp.task('pug:prod', sequence('pug:dev', 'favicon:inject')); // HTML create in dist + favicon inject
 
-// Sass
+gulp.task('htmlmin', ['pug:prod'], function() {
+	return gulp.src('dist/*.html')
+		.pipe(htmlmin({collapseWhitespace: true}))
+		.pipe(gulp.dest('prod'));
+});
+
+
+// SASS
 gulp.task('sass:dev', function() {
-	return gulp.src('app/sass/*.scss')
+	return gulp.src(['app/sass/vendor.scss', 'app/sass/main.scss'])
 		.pipe(plumber({
 			errorHandler: notify.onError(function(err) {
 				return {
@@ -201,9 +213,52 @@ gulp.task('sass:dev', function() {
 			browsers: ['last 10 versions'], // last 2 versions - default
 			cascade: true // выравнивание префиксных свойств (false для минифицирования)
 		}))
+		.pipe(concat('main.css'))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist/css'))
 		.pipe(bs.stream());
+});
+
+gulp.task('sass:prod', function() {
+	return gulp.src(['app/sass/vendor.scss', 'app/sass/main.scss'])
+		.pipe(sass())
+		// .pipe(uncss({
+		// 	html: ['dist/**/*.html'] // удаление лишних классов
+		// }))
+		.pipe(autoprefixer({
+			browsers: ['last 15 versions'], // last 2 versions - default
+			cascade: false // выравнивание префиксных свойств (false для минифицирования)
+		}))
+		.pipe(concat('main.css'))
+		.pipe(cssnano())
+		.pipe(gulp.dest('prod/css'))
+});
+
+
+// JavaScript
+var plugJS = [
+	'bower_components/jquery/dist/jquery.min.js',
+	'bower_components/jquery-migrate/jquery-migrate.min.js',
+	'bower_components/slick-carousel/slick/slick.min.js',
+	'bower_components/magnific-popup/dist/jquery.magnific-popup.min.js',
+	'app/vendor/share42/share42.js',
+	'app/vendor/yandex/yandex_metrika.js',
+
+	'app/js/svg-loader.js',
+	'app/js/common.js'
+];
+
+gulp.task('js:dev', function () {
+	return gulp.src(plugJS)
+    .pipe(concat('main.js')) // Объединение в один main.js
+    .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('js:prod', function () {
+	return gulp.src(plugJS)
+    .pipe(concat('main.js'))
+    .pipe(uglify()) // Минификация
+    .pipe(gulp.dest('prod/js'));
 });
 
 
@@ -212,14 +267,27 @@ gulp.task('clean:dist', function () {
 	return del('dist');
 });
 
-gulp.task('clean:fonts', function () {
-	return del('dist/fonts');
-});
-
 gulp.task('clean:prod', function () {
   return del('prod');
 });
 
+
+// APP DEVELOP
+// Images
+gulp.task('img:dev', ['favicon:generate'], function() {
+	return gulp.src([
+			'app/img/**/*.{jpg,png}',
+			'!app/img/favicon/*.*', '!app/img/favicon.*' // исключить favicon
+		], {base: 'app'})
+		// .pipe(imagemin({
+		// 	progressive: true,
+		// 	svgoPlugins: [{removeViewBox: false}],
+		// 	use: [pngquant()],
+		// 	interlaced: true
+		// }))
+		.pipe(gulp.dest('dist'))
+		.pipe(bs.stream());
+});
 
 // Fonts
 gulp.task('fonts:dev', function() {
@@ -234,45 +302,51 @@ gulp.task('fonts:dev', function() {
 		.pipe(bs.stream());
 });
 
-gulp.task('fonts', sequence('clean:fonts', 'fonts:dev'));
 
-
-// Image
-gulp.task('image', function() {
+gulp.task('app:dev', ['fonts:dev', 'img:dev', 'svgSprite'], function() {
 	return gulp.src([
-			'app/img/**/*.{jpg,png}',
-			'!app/img/favicon/*.*', '!app/img/favicon.*' // исключить favicon
+			'app/download/**/*.*',
+			'app/*.php',
+			'app/.htaccess',
+			'app/robots.txt'
 		], {base: 'app'})
-		.pipe(imagemin({
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()],
-			interlaced: true
-		}))
-		.pipe(gulp.dest('dist'))
-		.pipe(bs.stream());
+		.pipe(gulp.dest('dist'));
 });
 
 
-// JavaScript
-gulp.task('js:vendor', function () {
-  return gulp.src([
-			'bower_components/jquery/dist/jquery.min.js',
-			'bower_components/jquery-migrate/jquery-migrate.min.js',
-			'bower_components/slick-carousel/slick/slick.min.js'
-		])
-    .pipe(concat('vendor.js'))
-    //.pipe(uglify()) // Минификация
-    .pipe(gulp.dest('dist/js'));
+// PRODUCTION
+// app
+gulp.task('app:prod', function() {
+	return gulp.src([
+			'dist/fonts/**/*.*',
+			'dist/img/**/*.*', '!dist/img/sprite.svg',
+			'dist/download/**/*.*',
+			'dist/**/*.{php,xml}',
+			'dist/.htaccess',
+			'dist/robots.txt'
+		], {base: 'dist'})
+		.pipe(gulp.dest('prod'));
 });
 
-gulp.task('js:main', function () {
-  return gulp.src('app/js/*.js')
-    .pipe(concat('main.js'))
-    //.pipe(uglify()) // Минификация
-    .pipe(gulp.dest('dist/js'));
+gulp.task('sitemap', function () {
+	gulp.src('prod/**/*.html', {
+		read: false
+	})
+	.pipe(sitemap({
+		siteUrl: 'https://mbeg.ru'
+	}))
+	.pipe(gulp.dest('./prod'));
 });
 
+
+// BUILD
+gulp.task('build:dev', sequence('clean:dist', 'app:dev', ['pug:prod', 'js:dev'], 'sass:dev'));
+gulp.task('build:prod', sequence('clean:prod', 'app:prod', ['htmlmin', 'js:prod'], ['sass:prod', 'sitemap']));
+
+gulp.task('default', sequence('build:dev', 'build:prod'));
+
+// DEVELOP
+gulp.task('develop', sequence('sass:dev', 'pug:dev'));
 
 // Server + Watch
 gulp.task('server', ['develop'], function() {
@@ -281,109 +355,7 @@ gulp.task('server', ['develop'], function() {
 	});
 
 	gulp.watch('app/**/*.scss', ['sass:dev']);
-	gulp.watch('app/**/*.pug', ['pug']);
-	gulp.watch('dist/*.html').on('change', bs.reload);
-	// gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
-		// .on('change', bs.reload);
-	// gulp.watch('app/js/**/*.*', ['scripts'])
-	// 	.on('change', bs.reload);
-	// gulp.watch('app/fonts/**/*.*', ['fonts'])
-	// 	.on('change', bs.reload);
+	gulp.watch('app/**/*.pug', ['pug:dev']);
+	gulp.watch('app/js/**/*.*', ['js:dev'])
+		.on('change', bs.reload);
 });
-
-// Watch
-gulp.task('watch', function() {
-	gulp.watch('app/**/*.pug', ['pug']);
-	gulp.watch('app/**/*.scss', ['sass:dev']);
-  gulp.watch('app/**/*.js', ['scripts']);
-	gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image']);
-	gulp.watch();
-});
-
-
-// DEVELOP
-gulp.task('develop', sequence('sass:dev', 'pug'));
-
-
-// PRODUCTION
-// html
-gulp.task('htmlmin', function() {
-	return gulp.src('dist/*.html')
-		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(gulp.dest('prod'));
-});
-
-// css
-gulp.task('sass:prod', function() {
-	return gulp.src(['app/sass/*.scss', '!app/sass/*_.scss'])
-		.pipe(plumber({
-			errorHandler: notify.onError(function(err) {
-				return {
-					title: 'Sass Product',
-					message: err.message
-				};
-			})
-		}))
-		.pipe(sass())
-		.pipe(uncss({
-			html: ['dist/**/*.html']
-		}))
-		.pipe(autoprefixer({
-			browsers: ['last 15 versions'], // last 2 versions - default
-			cascade: false // выравнивание префиксных свойств (false для минифицирования)
-		}))
-		.pipe(cssnano())
-		.pipe(gulp.dest('prod/css'))
-});
-
-// app
-gulp.task('app:prod', function() {
-	return gulp.src([
-			'dist/fonts/**/*.*',
-			'dist/img/**/*.*'
-		], {base: 'dist'})
-		.pipe(gulp.dest('prod'));
-});
-
-
-// Build
-gulp.task('default', sequence('clean:dist', ['pug', 'sprite', 'image', 'favicon:generate', 'fonts:dev', 'scripts'], 'favicon:inject'));
-
-gulp.task('build:prod', sequence('clean:prod', ['htmlmin', 'sass:prod', 'app:prod']));
-
-
-gulp.task('s', function() {
-	bs.init({
-		server: 'dist'
-	});
-	gulp.watch(['app/html/**/*.*', 'app/*.pug'], ['pug']);
-	gulp.watch('app/sass/**/*.*', ['sass:dev']);
-	gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
-	.on('change', bs.reload);
-	gulp.watch('app/js/**/*.*', ['scripts'])
-	.on('change', bs.reload);
-	// gulp.watch(['app/html/**/*.*', 'app/*.pug'], ['pug']);
-	// gulp.watch('app/sass/**/*.*', ['sass:dev']);
-	// gulp.watch(['app/img/**/*.{jpg,png}', '!app/img/**/favicon.*'], ['image'])
-	// 	.on('change', bs.reload);
-	// gulp.watch('app/fonts/**/*.*', ['fonts'])
-	// 	.on('change', bs.reload);
-});
-
-// Wiredep
-// gulp.task('bower', ['pug'], function() {
-//   gulp.src('./dist/*.html')
-//     .pipe(wiredep())
-//     .pipe(gulp.dest('./dist'));
-// });
-
-// Bootstrap Grid
-// gulp.task('bootstrap', function() {
-// 	return gulp.src('node_modules/bootstrap/scss/bootstrap-grid.scss')
-// 		.pipe(newer('app/css/*.scss'))
-// 		.pipe(plumber())
-// 		.pipe(sourcemaps.init())
-// 		.pipe(sass())
-// 		.pipe(sourcemaps.write())
-// 		.pipe(gulp.dest('dist/css'))
-// });

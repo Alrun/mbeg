@@ -86,6 +86,7 @@ h4, h5, h6,
 }
 h4,
 .h4 {
+  margin-bottom: 1rem;
   color: darken($title-color, 35%);
 }
 h5, h6,
@@ -115,7 +116,7 @@ img {
 }
 
 /* Symbol SVG fix */
-body > svg:first-child {
+body > svg {
   display: none;
 }
 

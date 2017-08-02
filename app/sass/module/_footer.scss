@@ -1,6 +1,7 @@
 .logo__text {
+	padding-right: 45px;
 	line-height: 1.1;
-	padding-right: 25px;
+	color: $text-color;
 }
 .footer-nav__item + .footer-nav__item {
 	margin-top: 0.1875rem;
@@ -23,16 +24,32 @@
 	transition: all 0.2s;
 }
 .address__link:hover {
-	color: darken($text-color, 15%);
-	border-color: darken($text-color, 15%);
+	color: $main-color;
+	border-color: $main-color;
 }
 .address__text {
 	color: $title-color;
 }
 
-.share__link {
-	display: inline-block;
+.footer-phone__two {
+	margin-left: 1.65rem;
 }
-.share__link + .share__link {
-	margin-left: 10px;
+
+
+.slider-partner__item {
+	margin: 0 15px;
+}
+
+.slider-partner__link {
+	display: block;
+	height: 64px;
+}
+.slider-partner__link::before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.slider-partner__item svg {
+	vertical-align: middle;
 }

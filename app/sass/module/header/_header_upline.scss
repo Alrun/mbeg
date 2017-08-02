@@ -1,5 +1,5 @@
 .upline {
-	background-color: #000;
+	background-color: $second-color;
 }
 .upline svg {
 	vertical-align: bottom;
@@ -10,6 +10,9 @@
 }
 .upline__icon {
 	float: left;
+}
+.upline__icon svg {
+	fill: $title-color;
 }
 .upline__text {
 	display: inline-block;
@@ -24,9 +27,17 @@
 }
 .social__link {
 	display: inline-block;
+	vertical-align: bottom;
+	margin-left: 10px;
 }
-.social__link:not(:first-child) {
-	margin-left: 15px;
+.social__icon svg {
+	stroke: $title-color;
+	stroke-width: 1px;
+	fill: transparent;
+	transition: 0.3s;
+}
+.social__link:hover svg {
+	fill: $title-color;
 }
 .upline-logo {
 	padding: 10px 0;
@@ -36,7 +47,7 @@
 	.upline {
 		background-color: transparent !important;
 	}
-	.svg-upline__e-mail {
-		margin: 0 4px;
+	.svg-mail {
+		margin: 0 5px;
 	}
 }

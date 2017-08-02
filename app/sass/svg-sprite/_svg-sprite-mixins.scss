@@ -65,7 +65,7 @@ $padding: map-get($sprite, padding);
 
 
 //// Mixins
-/// Вставка иконки Bacground-image
+/// Вставка иконки Background-image
 @mixin svg-bg($iconName) {
 	@extend %sprite;
 	@extend %svg-background;
@@ -91,6 +91,7 @@ $padding: map-get($sprite, padding);
 	background-position: map-get($iconProp, relX) map-get($iconProp, relY);
 	background-size: cover;
 }
+
 
 /// Вставка иконки Symbol
 @mixin svg-symbol($iconName) {

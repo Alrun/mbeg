@@ -2,53 +2,69 @@
 	margin-bottom: 2rem;
 	text-align: center;
 }
-.welcome,
-.shop {
-	padding-top: 2rem;
-	margin-bottom: 2rem;
+
+.home-left__link:hover {
+	text-decoration: underline;
 }
-.welcome__item,
-.shop__item {
-	font-style: italic;
-	text-transform: uppercase;
-}
-.welcome__text,
-.shop__text {
-	line-height: 1;
-	margin: 0;
-	padding: 0;
-}
+
 .shop__link-wrap {
+	margin-top: 2rem;
 	margin-bottom: 1rem;
 }
 .shop__link {
 	display: inline-block;
-	padding: 0 15px;
+	padding: 5px 20px;
 	border-radius: 10px;
-	background-color: #fff;
+	background-color: transparent;
 	transition: all 1s;
+	background-color: lighten($second-color, 10%);
+	box-shadow: 1px 1px 15px $main-color;
 }
 .shop__link:hover {
+	background-color: lighten($second-color, 15%);
 	box-shadow: 1px 1px 30px #fff;
 }
 
-.slider-work {
+
+// uslugi
+.uslugi__main-title {
+	margin-bottom: 0;
+}
+.uslugi__item {
+	margin-top: 2rem;
+}
+.uslugi__icon {
+	fill: darken($title-color, 48%);
+}
+.uslugi__link {
+	margin: 0.5rem 0 1rem; 
+}
+
+
+// projects
+.slider-works {
 	margin-bottom: 4rem;
 }
-
-.slider-work__img {
+.slider-works__img {
 	width: 100%;
-	padding: 15px;
+	padding: 0 15px 15px;
 }
-
-.slider-work .slick-dots {
+.slider-works .slick-dots {
 	text-align: center;	
 }
-.slider-work .slick-dots li {
+.slider-works .slick-dots li {
 	padding: 2px;
+}
+.slider-works__item {
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+}
+.slider-works .works__desc {
+	background-color: lighten($second-color, 15%) !important;
 }
 
 
+// why
 .home__why {
 	position: relative;
 	padding-bottom: 150px;
@@ -59,6 +75,9 @@
 .why__text {
 	font-size: 0.9375rem;
 }
+.why__icon svg {
+	fill: $main-color;
+}
 .building {
 	position: absolute;
 	bottom: 0;
@@ -68,3 +87,4 @@
 	width: 100%;
 	vertical-align: bottom;
 }
+

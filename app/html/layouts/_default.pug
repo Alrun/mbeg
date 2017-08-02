@@ -10,15 +10,12 @@ html(lang='ru')
 		include ../includes/_head
 	
 	body.page
-		include ../includes/_styles
 		include ../includes/_header
 
 		block body
 			include ../pages/_home
 
 		include ../includes/_footer
-		//- include ../includes/_footer-2
 
 		block scripts
-			script(src="js/vendor.js")
-			script(src="js/main.js")
+			script(src="js/main.js", async)

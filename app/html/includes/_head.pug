@@ -6,9 +6,18 @@ head
 		meta(name='description' content=page.description)
 		meta(name='keywords' content=page.keywords)
 
-	block styles
-		link(rel='stylesheet' href='css/vendor.css')
-		link(rel='stylesheet' href='css/main.css')
-	
 		title #{page.title}
 
+	block styles
+		link(rel='stylesheet' href='css/main.css')
+		include _styles
+
+	block nav
+		style
+			|.home_active {
+			|	color: #47b900;
+			|	font-weight: 500;
+			|}
+			|.home_active:hover {
+			|	color: #47b900;
+			|}

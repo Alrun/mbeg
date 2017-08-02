@@ -1,47 +1,19 @@
 @import 'header/header_upline';
-@import 'header/header_container';
 @import 'header/header_logo';
-@import 'header/header_navbar_2';
+@import 'header/header_navbar';
 @import 'slick';
+@import 'popup';
 @import 'header/header_slick';
 @import 'header/header';
 
-@import 'breadcrumbs';
-
-.work-desc {
-	min-height: 5.5rem;
-	padding: 10px;
-	border-bottom: 1px solid $main-color;
-	margin: -15px 15px 0;
-	background: lighten($main-bg, 10%);
-}
-.work-desc__title {
-	margin: 0;
-	font-size: 0.9375rem;
-	font-style: normal;
-	font-weight: 300;
-	color: $title-color;
-
-	&::after {
-		content: "";
-		display: block;
-		width: 35%;
-		border-bottom: 1px solid $title-color;
-		margin: 5px 0;
-	}
-}
-.work-desc__text {
-	font-style: italic;
-	font-size: 0.875rem;
-	font-weight: 200;
-}
-
-.svg-checkbox {
-	font-size: 14px;
-}
+@import 'pages-components';
 
 @import 'home';
+@import 'pages/about';
 @import 'pages/portfolio';
+@import 'pages/project';
+@import 'pages/montazh';
 @import 'pages/contacts';
+@import '404';
 
 @import 'footer';

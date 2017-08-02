@@ -39,7 +39,7 @@ $container-max-widths: (
 
 // Grid columns
 $grid-columns:      12 !default;
-$grid-gutter-width: 30px !default;
+$grid-gutter-width: 15px !default;
 
 @mixin clearfix() {
   &::after {
@@ -118,8 +118,10 @@ $grid-gutter-width: 30px !default;
     // Prevent columns from collapsing when empty
     min-height: 1px;
     // Inner gutter via padding
-    padding-right: ($gutter / 2);
-    padding-left: ($gutter / 2);
+    // padding-right: ($gutter / 2);
+    // padding-left: ($gutter / 2);
+    padding-right: $gutter;
+    padding-left: $gutter;
 
     @if $enable-flex {
       width: 100%;
