@@ -1,0 +1,23 @@
+User-agent: *
+Disallow: /
+
+Allow: /*.html
+Disallow: /404.html
+
+Allow: /robots.txt
+Allow: /favicon
+
+User-agent: GoogleBot
+Allow: /css/*.css
+Allow: /js/*.js
+Allow: /img
+
+User-agent: Yandex
+Allow: /css/*.css
+Allow: /js/*.js
+Allow: /img
+Clean-Param: utm_source&utm_medium&utm_campaign
+Crawl-Delay: 0.5
+
+Sitemap: https://mbeg.ru/sitemap.xml
+Host: https://mbeg.ru
