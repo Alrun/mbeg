@@ -4214,7 +4214,9 @@ footer a {
 }
 
 .slider-partner__link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 64px
 }
 
@@ -4233,6 +4235,7 @@ footer a {
     max-height: 100%;
     height: 100%;
     max-width: 100px;
+    margin: auto;
 }
 
 .slider-partner__link_img {

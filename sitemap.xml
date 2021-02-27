@@ -3,19 +3,19 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>https://mbeg.ru/about</loc>
+        <loc>https://mbeg.ru/about.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/contacts</loc>
+        <loc>https://mbeg.ru/contacts.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/details</loc>
+        <loc>https://mbeg.ru/details.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -27,109 +27,109 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/stroitelstvo-kommercheskie-pomeshcheniya</loc>
+        <loc>https://mbeg.ru/stroitelstvo-kommercheskie-pomeshcheniya.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/stroitelstvo-cam</loc>
+        <loc>https://mbeg.ru/stroitelstvo-cam.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/stroitelstvo-el</loc>
+        <loc>https://mbeg.ru/stroitelstvo-el.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/stroitelstvo-tep</loc>
+        <loc>https://mbeg.ru/stroitelstvo-tep.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/stroitelstvo-vod</loc>
+        <loc>https://mbeg.ru/stroitelstvo-vod.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/stroitelstvo</loc>
+        <loc>https://mbeg.ru/stroitelstvo.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/partners-2</loc>
+        <loc>https://mbeg.ru/partners-2.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/partners</loc>
+        <loc>https://mbeg.ru/partners.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/portfolio-stroitelstvo</loc>
+        <loc>https://mbeg.ru/portfolio-stroitelstvo.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/portfolio-project</loc>
+        <loc>https://mbeg.ru/portfolio-project.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/portfolio</loc>
+        <loc>https://mbeg.ru/portfolio.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/project-is</loc>
+        <loc>https://mbeg.ru/project-is.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/project-oz</loc>
+        <loc>https://mbeg.ru/project-oz.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/project-pz</loc>
+        <loc>https://mbeg.ru/project-pz.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/project-zz</loc>
+        <loc>https://mbeg.ru/project-zz.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/project</loc>
+        <loc>https://mbeg.ru/project.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/reviews</loc>
+        <loc>https://mbeg.ru/reviews.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://mbeg.ru/vacancy</loc>
+        <loc>https://mbeg.ru/vacancy.html</loc>
         <lastmod>2020-10-22T00:00:00.000Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

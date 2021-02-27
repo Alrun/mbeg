@@ -3739,119 +3739,126 @@
             dots: !0,
             focusOnSelect: !0,
             autoplay: !0,
+            speed: 600,
             autoplaySpeed: 1e4
         }),
-            $('.slider-bg').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: !1,
-                fade: !0,
-                asNavFor: '.slider-main'
-            }),
-            $('.slider-works').slick({
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                arrows: !0,
-                dots: !0,
-                infinite: !0,
-                speed: 300,
-                responsive: [{breakpoint: 1200, settings: {slidesToShow: 2, slidesToScroll: 2}}, {
-                    breakpoint: 992,
-                    settings: {slidesToShow: 1, slidesToScroll: 1, dots: !1}
-                }]
-            }),
-            $('.slider-partner').slick({
-                arrows: !0,
-                initialSlide: 5,
-                slidesToShow: 7,
-                slidesToScroll: 5,
-                dots: !1,
-                infinite: !0,
-                variableWidth: !0,
-                centerMode: !0,
-                speed: 300
-            }),
-            $('.slider-reviews-main').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                fade: !0,
-                asNavFor: '.slider-reviews-nav'
-            }),
-            $('.slider-reviews-nav').slick({
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                arrows: !1,
-                asNavFor: '.slider-reviews-main',
-                focusOnSelect: !0,
-                responsive: [{breakpoint: 768, settings: {slidesToShow: 3, slidesToScroll: 1}}, {
-                    breakpoint: 544,
-                    settings: {slidesToShow: 2, slidesToScroll: 1}
-                }]
-            }),
-            $('.slider-works').magnificPopup({
-                tClose: 'Закрыть (Esc)',
-                delegate: 'a',
-                type: 'image',
-                mainClass: 'mfp-with-zoom mfp-img-mobile',
-                gallery: {
-                    enabled: !1,
-                    preload: [0, 3],
-                    navigateByImgClick: !0,
-                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
-                    tPrev: 'Предыдущая работа',
-                    tNext: 'Следующая работа',
-                    tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
-                },
-                image: {
-                    cursor: null,
-                    tError: '<a href="%url%">Изображение #%curr%</a> недоступно.',
-                    titleSrc: function (e) {
-                        return e.el.find('img').attr('alt');
-                    }
-                },
-                zoom: {
-                    enabled: !0, duration: 300, opener: function (e) {
-                        return e.find('img');
-                    }
+        $('.slider-bg').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: !1,
+            fade: !0,
+            asNavFor: '.slider-main'
+        }),
+        $('.slider-works').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: !0,
+            dots: !0,
+            infinite: !0,
+            speed: 600,
+            responsive: [
+                {breakpoint: 1200, settings: {slidesToShow: 2, slidesToScroll: 2}},
+                {breakpoint: 992, settings: {slidesToShow: 1, slidesToScroll: 1, dots: !1}}
+            ]
+        }),
+        $('.slider-partner').slick({
+            arrows: !0,
+            initialSlide: 2,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            dots: !1,
+            infinite: !0,
+            // variableWidth: !0,
+            // centerMode: !0,
+            speed: 300,
+            responsive: [
+                {breakpoint: 1200, settings: {slidesToShow: 5}},
+                {breakpoint: 992, settings: {slidesToShow: 4}},
+                {breakpoint: 768, settings: {slidesToShow: 3}},
+                {breakpoint: 544, settings: {slidesToShow: 1}}
+            ]
+        }),
+        $('.slider-reviews-main').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: !0,
+            asNavFor: '.slider-reviews-nav'
+        }),
+        $('.slider-reviews-nav').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: !1,
+            asNavFor: '.slider-reviews-main',
+            focusOnSelect: !0,
+            responsive: [
+                {breakpoint: 768, settings: {slidesToShow: 3, slidesToScroll: 1}},
+                {breakpoint: 544, settings: {slidesToShow: 2, slidesToScroll: 1}}
+            ]
+        }),
+        $('.slider-works').magnificPopup({
+            tClose: 'Закрыть (Esc)',
+            delegate: 'a',
+            type: 'image',
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            gallery: {
+                enabled: !1,
+                preload: [0, 3],
+                navigateByImgClick: !0,
+                arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+                tPrev: 'Предыдущая работа',
+                tNext: 'Следующая работа',
+                tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+            },
+            image: {
+                cursor: null,
+                tError: '<a href="%url%">Изображение #%curr%</a> недоступно.',
+                titleSrc: function (e) {
+                    return e.el.find('img').attr('alt');
                 }
-            }),
-            $('.works').magnificPopup({
-                tClose: 'Закрыть (Esc)',
-                delegate: 'a',
-                type: 'image',
-                mainClass: 'mfp-with-zoom mfp-img-mobile',
-                gallery: {
-                    enabled: !0,
-                    navigateByImgClick: !0,
-                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
-                    tPrev: 'Предыдущая работа',
-                    tNext: 'Следующая работа',
-                    tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
-                },
-                image: {
-                    cursor: null,
-                    tError: '<a href="%url%">Изображение #%curr%</a> недоступно.',
-                    titleSrc: function (e) {
-                        return e.el.find('img').attr('alt');
-                    }
-                },
-                zoom: {
-                    enabled: !0, duration: 300, opener: function (e) {
-                        return e.find('img');
-                    }
+            },
+            zoom: {
+                enabled: !0, duration: 300, opener: function (e) {
+                    return e.find('img');
                 }
-            }),
-            $('.footer-map').magnificPopup({
-                tClose: 'Закрыть (Esc)',
-                disableOn: 700,
-                type: 'iframe',
-                mainClass: 'mfp-fade',
-                removalDelay: 160,
-                preloader: !0,
-                index: '//maps.google.',
-                src: '%id%&output=embed',
-                fixedContentPos: !0
-            });
+            }
+        }),
+        $('.works').magnificPopup({
+            tClose: 'Закрыть (Esc)',
+            delegate: 'a',
+            type: 'image',
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            gallery: {
+                enabled: !0,
+                navigateByImgClick: !0,
+                arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+                tPrev: 'Предыдущая работа',
+                tNext: 'Следующая работа',
+                tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+            },
+            image: {
+                cursor: null,
+                tError: '<a href="%url%">Изображение #%curr%</a> недоступно.',
+                titleSrc: function (e) {
+                    return e.el.find('img').attr('alt');
+                }
+            },
+            zoom: {
+                enabled: !0, duration: 300, opener: function (e) {
+                    return e.find('img');
+                }
+            }
+        }),
+        $('.footer-map').magnificPopup({
+            tClose: 'Закрыть (Esc)',
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: !0,
+            index: '//maps.google.',
+            src: '%id%&output=embed',
+            fixedContentPos: !0
+        });
     }),
     $(function () {
         $('#send').click(function () {
