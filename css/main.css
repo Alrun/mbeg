@@ -3754,18 +3754,6 @@ footer a {
     fill: #47b900
 }
 
-@media (min-width: 992px) {
-    .tile__title {
-        font-size: .9875rem
-    }
-}
-
-@media (min-width: 1200px) {
-    .tile__title {
-        font-size: 1.125rem
-    }
-}
-
 .welcome {
     padding-top: 2.5rem;
     margin-bottom: 2rem;
@@ -4731,9 +4719,6 @@ section:last-child {
 
 .advantages__img {
     display: block;
-    /*height: 60px;*/
-    /*width: 60px;*/
-
     margin: auto;
 }
 
@@ -4797,5 +4782,9 @@ section:last-child {
 }
 
 .gallery__link:hover .gallery__text {
+    opacity: 0;
+}
+
+.opacity-0 {
     opacity: 0;
 }
