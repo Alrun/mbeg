@@ -4734,7 +4734,8 @@ section:last-child {
 
 .gallery {
     padding: 1rem 0 .5rem;
-    margin: 0 -12.5px;
+    margin: 0 -7.5px;
+    overflow: hidden;
 }
 
 .gallery__item {
