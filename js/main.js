@@ -3859,6 +3859,10 @@
             src: '%id%&output=embed',
             fixedContentPos: !0
         });
+
+        $('input[type="tel"]').each(function() {
+            Inputmask("+7 (999) 999-99-99").mask($(this));
+        });
     }),
     $(function () {
         $('#send').click(function () {
