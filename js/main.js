@@ -3860,6 +3860,19 @@
             fixedContentPos: !0
         });
 
+        $('[data-toggle="modal"]').magnificPopup({
+            type: 'inline',
+            preloader: false,
+            modal: true,
+            removalDelay: 500,
+            mainClass: 'mfp-move-from-top'
+        });
+
+        $(document).on('click', '[data-dismiss="modal"]', function (e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+        });
+
         $('input[type="tel"]').each(function() {
             Inputmask("+7 (999) 999-99-99").mask($(this));
         });
