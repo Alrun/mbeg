@@ -3860,6 +3860,19 @@
             fixedContentPos: !0
         });
 
+        $('[data-toggle="modal"]').magnificPopup({
+            type: 'inline',
+            preloader: false,
+            modal: true,
+            removalDelay: 500,
+            mainClass: 'mfp-move-from-top'
+        });
+
+        $(document).on('click', '[data-dismiss="modal"]', function (e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+        });
+
         $('input[type="tel"]').each(function() {
             Inputmask("+7 (999) 999-99-99").mask($(this));
         });
@@ -3873,9 +3886,14 @@
             }), e && ($('form').val(function () {
                 var e = $(this).serialize();
                 $.ajax({
-                    url: '/send.php', type: 'POST', data: e, success: function (e) {
+                    url: '/send.php', type: 'POST',
+                    data: e,
+                    success: function (e) {
+                        $('.js-preloader').addClass('hidden-xs-up');
+                        $('.contacts-feedback__success').removeClass('hidden-xs-up');
+                        $('#send').attr('disabled', 'disabled');
                     }
                 });
-            }), $('.contacts-feedback__success').removeClass('hidden-xs-up'), $('#send').attr('disabled', 'disabled'));
+            }), $('.js-preloader').removeClass('hidden-xs-up'));
         });
     });
