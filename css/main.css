@@ -5240,6 +5240,18 @@ ol:not([class]) > li > ol:not([class]) > li ol:not([class]) > li {
     padding: 0 0 0 2.5em;
 }
 
+.form__btn-preloader {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 5px;
+    vertical-align: middle;
+    background-image: url('data:image/svg+xml,\<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -20 40 40">\<style>circle { animation: 4s a infinite linear, 3s o infinite linear; }\@keyframes a {from{stroke-dasharray:100 0}50%25{stroke-dasharray:0 100}to{stroke-dasharray:100 0}}\@keyframes o {from{stroke-dashoffset:75}to{stroke-dashoffset:375}}\<%2Fstyle><circle r="15.9154943092" stroke-width="6" fill="none" stroke="silver" />\</svg>');
+}
+
+
 .opacity-0 {
     opacity: 0 !important;
 }

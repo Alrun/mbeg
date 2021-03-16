@@ -3886,9 +3886,14 @@
             }), e && ($('form').val(function () {
                 var e = $(this).serialize();
                 $.ajax({
-                    url: '/send.php', type: 'POST', data: e, success: function (e) {
+                    url: '/send.php', type: 'POST',
+                    data: e,
+                    success: function (e) {
+                        $('.js-preloader').addClass('hidden-xs-up');
+                        $('.contacts-feedback__success').removeClass('hidden-xs-up');
+                        $('#send').attr('disabled', 'disabled');
                     }
                 });
-            }), $('.contacts-feedback__success').removeClass('hidden-xs-up'), $('#send').attr('disabled', 'disabled'));
+            }), $('.js-preloader').removeClass('hidden-xs-up'));
         });
     });
